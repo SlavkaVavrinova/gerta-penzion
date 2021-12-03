@@ -23,6 +23,7 @@ body {
   font-size: 16px;
   background-color: $light;
   color: $dark;
+  line-height: 1.8;
 }
 
 h1,
@@ -36,7 +37,7 @@ h1 {
   text-align: center;
   font-size: 40px;
   grid-column: 1/-1;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 h2 {
@@ -48,8 +49,10 @@ h3 {
   font-size: 20px;
   color: $secondary;
 }
+
 .wrapper {
   margin-top: 100px;
+  padding: $spacer/2;
 }
 
 button {
@@ -60,6 +63,7 @@ button {
   border-radius: 4px;
   font-weight: 600;
   font-family: $font-default;
+  padding: 1rem 2rem;
 }
 
 .menu {
@@ -71,62 +75,64 @@ button {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 75px;
+    background-color: $secondary;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__item {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+
+    &--language {
+      font-size: 16px;
+    }
+
+    &--covid {
+      border-radius: 0 0 0 10px;
+      color: $secondary;
+    }
+  }
+
   &__link {
     color: $light;
     text-decoration: none;
   }
-}
 
-.menu__up {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: $secondary;
-  color: $secondary;
-  margin: 0;
-  padding: 0;
-  border-radius: 0 0 0 10px;
-  font-size: 12px;
+  &__up {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $secondary;
+    color: $secondary;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 0 10px;
+    font-size: 12px;
+  }
+
+  &__down {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $secondary;
+    color: $light;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
 }
 
 .menu__up .menu__item {
   background-color: $light;
-}
-
-.menu__item--covid {
-  border-radius: 0 0 0 10px;
-  color: $secondary;
-}
-
-.menu__down {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: $secondary;
-  color: $light;
-  margin: 0;
-  padding: 0.5rem 0;
-}
-
-.menu__logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 75px;
-  background-color: $secondary;
-  border-radius: 0 0 10px 10px;
-}
-
-.menu__item {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  padding: 0 0.5rem;
-
-  &--language {
-    font-size: 16px;
-  }
 }
 
 .menu__link--covid,
@@ -136,6 +142,7 @@ button {
   display: flex;
   align-items: center;
 }
+
 .hide {
   display: none;
 }
@@ -144,6 +151,8 @@ button {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 48px;
+
   &__left {
     position: relative;
   }
@@ -151,6 +160,14 @@ button {
   &__img {
     width: 100%;
   }
+
+  &__motto {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.5;
+  }
+
   &__button {
     position: absolute;
     right: -120px;
@@ -159,8 +176,55 @@ button {
   }
 }
 
+.section {
+  margin-top: 48px;
+
+  &__h2 {
+    margin-left: 40vw;
+    position: relative;
+    padding-left: 1em;
+  }
+  &__h2::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: -40vw;
+    width: 40vw;
+    height: 1em;
+    border-bottom: 1px solid $secondary;
+    margin-bottom: 0.7em;
+  }
+
+  &__img {
+    width: 60%;
+    &--booking {
+      width: 100%;
+    }
+  }
+
+  &__img--right {
+    margin-left: 40%;
+    margin-top: -48px;
+    box-shadow: -16px -16px 0 $primary;
+  }
+
+  &__motto {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    &--one {
+      justify-content: flex-end;
+    }
+  }
+}
+
 .footer {
   font-size: 14px;
+  color: $secondary;
   &__up {
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -173,7 +237,6 @@ button {
     width: 100%;
     padding-left: $spacer;
     margin-top: $spacer;
-    fill: $secondary;
   }
 
   &__title {
