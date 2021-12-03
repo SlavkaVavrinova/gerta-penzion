@@ -155,6 +155,23 @@ button {
   padding: 1rem 2rem;
 }
 
+.benefits__list {
+  list-style-type: none;
+}
+.benefits__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.benefits__icon {
+  background-color: #b09c59;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  padding: 0.5em;
+  margin-right: 1em;
+}
+
 .section {
   margin-top: 48px;
 }
@@ -172,6 +189,12 @@ button {
   height: 1em;
   border-bottom: 1px solid #66462c;
   margin-bottom: 0.7em;
+}
+.section__picture {
+  position: relative;
+}
+.section__picture {
+  position: absolute;
 }
 .section__img {
   width: 60%;

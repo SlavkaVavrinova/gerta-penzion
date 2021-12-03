@@ -176,6 +176,27 @@ button {
   }
 }
 
+.benefits {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+
+  &__icon {
+    background-color: $primary;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    padding: 0.5em;
+    margin-right: 1em;
+  }
+}
+
 .section {
   margin-top: 48px;
 
@@ -193,6 +214,13 @@ button {
     height: 1em;
     border-bottom: 1px solid $secondary;
     margin-bottom: 0.7em;
+  }
+
+  &__picture {
+    position: relative;
+  }
+  &__picture {
+    position: absolute;
   }
 
   &__img {
