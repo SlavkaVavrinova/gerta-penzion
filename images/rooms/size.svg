@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="24px"
+   viewBox="0 0 24 24"
+   width="24px"
+   fill="#fffdf7"
+   version="1.1"
+   id="svg828"
+   sodipodi:docname="1roomSize.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs832" />
+  <sodipodi:namedview
+     id="namedview830"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="32.291667"
+     inkscape:cx="10.978065"
+     inkscape:cy="9.5225806"
+     inkscape:window-width="2560"
+     inkscape:window-height="1025"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1019" />
+  <path
+     d="M0 0h24v24H0V0z"
+     fill="none"
+     id="path824" />
+  <g
+     inkscape:groupmode="layer"
+     id="g1019"
+     inkscape:label="room"
+     style="display:inline">
+    <path
+       id="path1017"
+       d="M 3,3 C 1.9,3 1,3.9 1,5 v 14 c 0,1.1 0.9,2 2,2 h 18 c 1.1,0 2,-0.9 2,-2 V 5 C 23,3.9 22.1,3 21,3 Z M 3,4.9902344 H 21 V 19.009766 H 3 Z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g1443"
+     inkscape:label="size"
+     style="display:inline">
+    <path
+       d="M 14.30722,0.5 12.893,1.914215 15.014323,4.035537 12.893003,6.156856 14.30722,7.571071 17.842752,4.035537 Z"
+       id="path1441"
+       style="display:inline;opacity:0.98"
+       sodipodi:nodetypes="ccccccc" />
+  </g>
+</svg>

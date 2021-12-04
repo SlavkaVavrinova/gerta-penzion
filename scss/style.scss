@@ -4,7 +4,9 @@ $secondary: #66462c;
 $light: #fffdf7;
 $dark: #0b0500;
 $error: #bb0a21;
+
 $spacer: 24px;
+$spacerL: 48px;
 
 $font-default: 'Montserrat', 'Roboto', sans-serif;
 $font-special: 'Playfair Display', serif;
@@ -50,6 +52,11 @@ h3 {
   color: $secondary;
 }
 
+sup {
+  padding-bottom: 0.7em;
+  font-size: 75%;
+}
+
 .wrapper {
   margin-top: 100px;
   padding: $spacer/2;
@@ -64,6 +71,13 @@ button {
   font-weight: 600;
   font-family: $font-default;
   padding: 1rem 2rem;
+}
+
+.button {
+  &__link {
+    color: $light;
+    text-decoration: none;
+  }
 }
 
 .menu {
@@ -151,7 +165,8 @@ button {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 48px;
+  margin-bottom: $spacer;
+  position: relative;
 
   &__left {
     position: relative;
@@ -198,7 +213,7 @@ button {
 }
 
 .section {
-  margin-top: 48px;
+  margin-top: $spacer;
 
   &__h2 {
     margin-left: 40vw;
@@ -208,12 +223,11 @@ button {
   &__h2::before {
     content: ' ';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: -40vw;
     width: 40vw;
     height: 1em;
     border-bottom: 1px solid $secondary;
-    margin-bottom: 0.7em;
   }
 
   &__picture {
@@ -250,9 +264,81 @@ button {
   }
 }
 
+.room {
+  margin-top: $spacer;
+
+  &__h2 {
+    margin-left: 10vw;
+    position: relative;
+    padding-left: 1em;
+  }
+
+  &__h2::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: -10vw;
+    width: 10vw;
+    height: 1em;
+    border-bottom: 1px solid $secondary;
+  }
+
+  &__img {
+    width: calc(100% - 16px);
+    margin-left: 16px;
+    height: auto;
+    box-shadow: -16px -16px 0 $primary;
+  }
+
+  &__motto {
+    font-weight: 600;
+  }
+
+  &__button {
+    text-align: end;
+  }
+}
+
+.price {
+  background-color: $primmaryVariant;
+  border-top: 1px solid $primary;
+  border-bottom: 1px solid $primary;
+  font-size: 24px;
+  font-weight: 600;
+  color: $secondary;
+  text-align: center;
+  padding: 1em 0;
+  margin-bottom: $spacerL;
+}
+
+.section-room {
+  margin-top: $spacerL;
+
+  &__h2 {
+    margin-left: 10vw;
+    position: relative;
+    padding-left: 1em;
+  }
+
+  &__h2::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: -10vw;
+    width: 10vw;
+    height: 1em;
+    border-bottom: 1px solid $secondary;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+}
+
 .footer {
   font-size: 14px;
   color: $secondary;
+  margin-top: $spacerL;
   &__up {
     display: grid;
     grid-template-columns: 100px 1fr;
