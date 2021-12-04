@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <meta
+      name="description"
+      content="Pension Gerta Český Krumlov = ideální ubytování pro Vaši dovolenou! Rodinný pension v klidné části města, nedaleko UNESCO centra."
+    />
+
+    <!-- Google Fonts, Montserrat, PlayfairDisplay-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+     
+        <div class="menu">
+          <ul class="menu__down">
+            <li class="hide menu__item">
+              <a class="menu__link" href="#">domů</a>
+            </li>
+            <li class="hide menu__item">
+              <a class="menu__link" href="#">galerie</a>
+            </li>
+            <li class="hide menu__item">
+              <a class="menu__link" href="#">o nás</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#"> pokoje</a>
+            </li>
+            <li class="menu__item menu__item--logo">
+              <img
+                class="menu__logo"
+                src="/images/logo.svg"
+                alt="Logo penzion Gerta Český Krumlov"
+              />
+            </li>
+            <li class="hide menu__item">
+              <a class="menu__link" href="#">rezervace</a>
+            </li>
+            <li class="hide menu__item">
+              <a class="menu__link" href="#">výlety</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">kontakt</a>
+            </li>
+            <li class="menu__item">
+              menu
+              <img src="images/menu.svg" alt="Ikona menu" />
+            </li>
+          </ul>
+          <ul class="menu__up">
+            <li class="menu__item menu__item--covid">
+              <a class="menu__link menu__link--covid" href="#">
+                covid <img src="images/covid.svg" alt="Ikona covid"
+              /></a>
+            </li>
+            <li class="menu__item">
+              <a
+                class="menu__link menu__link--map"
+                href="https://goo.gl/maps/ZgsGDbw5X8nvqnFf7"
+                target="_blanc"
+              >
+                navigovat<img src="images/map.svg" alt="Ikona navigovat"
+              /></a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--map" href="tel:+775959977">
+                volat<img src="images/phone.svg" alt="Ikona volat"
+              /></a>
+            </li>
+            <li class="menu__item menu__item--language">
+              CZ<img src="images/open.svg" alt="Ikona změna jazyka" />
+            </li>
+          </ul>
+        </div>
+
+                
+                   {{ content | safe }}
+
+                <footer class="footer">
+              <div class="footer__up">
+                <img
+                  class="footer__logo"
+                  src="images/logo.svg"
+                  alt="Logo Penzion Gerta Český Krumlov"
+                />
+                <div class="footer__text">
+                  <h3 class="footer__title">Penzion Gerta</h3>
+                  <ul class="footer__address">
+                    <li>Středová 487</li>
+                    <li>Český Krumlov 381 01</li>
+                  </ul>
+                  <ul class="footer__contact">
+                    <li>
+                      Telefon:
+                      <a class="footer__link--contact" href="tel:+420380711979"
+                        >+420 380 711 979</a
+                      >
+                    </li>
+                    <li>
+                      Mobil:
+                      <a class="footer__link--contact" href="tel:+420777078309"
+                        >+420 777 078 309</a
+                      >
+                    </li>
+                    <li>
+                      E-Mail:
+                      <a
+                        class="footer__link--contact"
+                        href="mailto: pension.gerta@seznam.cz"
+                      >
+                        pension.gerta@seznam.cz</a
+                      >
+                    </li>
+                    <li>Recepce: 8:00 - 20:00</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__copyright">
+                &copy Gerta.cz 2021 Made with 🤍
+                <a class="footer__link" href="https://slavkavav.cz/">SlavkaVav</a>
+              </div>
+              </footer>
+    </div>
+
+  </body>
+</html>
