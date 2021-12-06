@@ -1,0 +1,98 @@
+@use '../base/colors';
+
+.menu {
+  text-transform: uppercase;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 75px;
+    background-color: colors.$secondary;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__item {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+
+    &--language {
+      font-size: 16px;
+    }
+
+    &--covid {
+      border-radius: 0 0 0 10px;
+      color: colors.$secondary;
+    }
+  }
+
+  &__link {
+    color: colors.$light;
+    text-decoration: none;
+  }
+
+  &__up {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: colors.$secondary;
+    color: colors.$secondary;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 0 10px;
+    font-size: 12px;
+  }
+
+  &__down {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: colors.$secondary;
+    color: colors.$light;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+}
+
+.menu__up .menu__item {
+  background-color: colors.$light;
+}
+
+.menu__link--covid,
+.menu__link--map,
+.menu__link--call {
+  color: colors.$secondary;
+  display: flex;
+  align-items: center;
+}
+
+.menu__hide {
+  display: none;
+}
+
+.menu-opened {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
+  margin-left: 20vw;
+  line-height: 4rem;
+  z-index: 20;
+  background-color: colors.$primary;
+}
+
+#hokusPokus {
+  background-color: black;
+}

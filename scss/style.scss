@@ -1,15 +1,7 @@
-$primary: #b09c59;
-$primmaryVariant: #f9ecc1;
-$secondary: #66462c;
-$light: #fffdf7;
-$dark: #0b0500;
-$error: #bb0a21;
-
-$spacer: 24px;
-$spacerL: 48px;
-
-$font-default: 'Montserrat', 'Roboto', sans-serif;
-$font-special: 'Playfair Display', serif;
+@use 'base/colors';
+@use 'base/typography';
+@use 'layout/navigation';
+@use 'components/buttons.scss';
 
 html {
   box-sizing: border-box;
@@ -21,21 +13,21 @@ html {
 }
 
 body {
-  font-family: $font-default;
+  font-family: typography.$font-default;
   font-size: 16px;
-  background-color: $light;
-  color: $dark;
+  background-color: colors.$light;
+  color: colors.$dark;
   line-height: 1.8;
 }
 
 h1,
 h2,
 h3 {
-  font-family: $font-special;
+  font-family: typography.$font-special;
 }
 
 h1 {
-  color: $primary;
+  color: colors.$primary;
   text-align: center;
   font-size: 40px;
   grid-column: 1/-1;
@@ -44,12 +36,12 @@ h1 {
 
 h2 {
   font-size: 32px;
-  color: $secondary;
+  color: colors.$secondary;
 }
 
 h3 {
   font-size: 20px;
-  color: $secondary;
+  color: colors.$secondary;
 }
 
 sup {
@@ -59,113 +51,32 @@ sup {
 
 .wrapper {
   margin-top: 100px;
-  padding: $spacer/2;
+  padding: typography.$spacer/2;
 }
 
 button {
   text-transform: uppercase;
-  background-color: $primary;
-  border: $primary;
-  color: $light;
+  background-color: colors.$primary;
+  border: colors.$primary;
+  color: colors.$light;
   border-radius: 4px;
   font-weight: 600;
-  font-family: $font-default;
+  font-family: typography.$font-default;
   padding: 1rem 2rem;
 }
 
 .button {
   &__link {
-    color: $light;
+    color: colors.$light;
     text-decoration: none;
   }
-}
-
-.menu {
-  text-transform: uppercase;
-  line-height: 1;
-  display: flex;
-  flex-direction: column-reverse;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
-  &__logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 75px;
-    background-color: $secondary;
-    border-radius: 0 0 10px 10px;
-  }
-
-  &__item {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    padding: 0 0.5rem;
-
-    &--language {
-      font-size: 16px;
-    }
-
-    &--covid {
-      border-radius: 0 0 0 10px;
-      color: $secondary;
-    }
-  }
-
-  &__link {
-    color: $light;
-    text-decoration: none;
-  }
-
-  &__up {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: $secondary;
-    color: $secondary;
-    margin: 0;
-    padding: 0;
-    border-radius: 0 0 0 10px;
-    font-size: 12px;
-  }
-
-  &__down {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: $secondary;
-    color: $light;
-    margin: 0;
-    padding: 0.5rem 0;
-  }
-}
-
-.menu__up .menu__item {
-  background-color: $light;
-}
-
-.menu__link--covid,
-.menu__link--map,
-.menu__link--call {
-  color: $secondary;
-  display: flex;
-  align-items: center;
-}
-
-.hide {
-  display: none;
 }
 
 .header {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: $spacer;
+  margin-bottom: typography.$spacer;
   position: relative;
 
   &__left {
@@ -203,7 +114,7 @@ button {
   }
 
   &__icon {
-    background-color: $primary;
+    background-color: colors.$primary;
     width: 3em;
     height: 3em;
     border-radius: 50%;
@@ -213,7 +124,7 @@ button {
 }
 
 .section {
-  margin-top: $spacer;
+  margin-top: typography.$spacer;
 
   &__h2 {
     margin-left: 40vw;
@@ -227,7 +138,7 @@ button {
     left: -40vw;
     width: 40vw;
     height: 1em;
-    border-bottom: 1px solid $secondary;
+    border-bottom: 1px solid colors.$secondary;
   }
 
   &__picture {
@@ -247,7 +158,7 @@ button {
   &__img--right {
     margin-left: 40%;
     margin-top: -48px;
-    box-shadow: -16px -16px 0 $primary;
+    box-shadow: -16px -16px 0 colors.$primary;
   }
 
   &__motto {
@@ -265,7 +176,7 @@ button {
 }
 
 .room {
-  margin-top: $spacer;
+  margin-top: typography.$spacer;
 
   &__h2 {
     margin-left: 10vw;
@@ -280,14 +191,14 @@ button {
     left: -10vw;
     width: 10vw;
     height: 1em;
-    border-bottom: 1px solid $secondary;
+    border-bottom: 1px solid colors.$secondary;
   }
 
   &__img {
     width: calc(100% - 16px);
     margin-left: 16px;
     height: auto;
-    box-shadow: -16px -16px 0 $primary;
+    box-shadow: -16px -16px 0 colors.$primary;
   }
 
   &__motto {
@@ -300,19 +211,19 @@ button {
 }
 
 .price {
-  background-color: $primmaryVariant;
-  border-top: 1px solid $primary;
-  border-bottom: 1px solid $primary;
+  background-color: colors.$primmaryVariant;
+  border-top: 1px solid colors.$primary;
+  border-bottom: 1px solid colors.$primary;
   font-size: 24px;
   font-weight: 600;
-  color: $secondary;
+  color: colors.$secondary;
   text-align: center;
   padding: 1em 0;
-  margin-bottom: $spacerL;
+  margin-bottom: typography.$spacerL;
 }
 
 .section-room {
-  margin-top: $spacerL;
+  margin-top: typography.$spacerL;
 
   &__h2 {
     margin-left: 10vw;
@@ -327,7 +238,7 @@ button {
     left: -10vw;
     width: 10vw;
     height: 1em;
-    border-bottom: 1px solid $secondary;
+    border-bottom: 1px solid colors.$secondary;
   }
 
   &__img {
@@ -337,28 +248,28 @@ button {
 
 .footer {
   font-size: 14px;
-  color: $secondary;
-  margin-top: $spacerL;
+  color: colors.$secondary;
+  margin-top: typography.$spacerL;
   &__up {
     display: grid;
     grid-template-columns: 100px 1fr;
-    gap: $spacer;
-    background-color: $primmaryVariant;
-    border: 1px solid $primary;
+    gap: typography.$spacer;
+    background-color: colors.$primmaryVariant;
+    border: 1px solid colors.$primary;
   }
 
   &__logo {
     width: 100%;
-    padding-left: $spacer;
-    margin-top: $spacer;
+    padding-left: typography.$spacer;
+    margin-top: typography.$spacer;
   }
 
   &__title {
-    margin-top: $spacer;
+    margin-top: typography.$spacer;
   }
 
   &__text {
-    background-color: $primmaryVariant;
+    background-color: colors.$primmaryVariant;
   }
 
   &__address {
@@ -372,18 +283,18 @@ button {
   }
 
   &__copyright {
-    background-color: $secondary;
-    color: $light;
+    background-color: colors.$secondary;
+    color: colors.$light;
     text-align: center;
     padding: 0.5rem 0;
   }
 
   &__link--contact {
-    color: $dark;
+    color: colors.$dark;
     text-decoration: none;
   }
 
   &__link {
-    color: $light;
+    color: colors.$light;
   }
 }
