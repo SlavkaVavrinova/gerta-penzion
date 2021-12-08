@@ -1,0 +1,71 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.contact {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    color: colors.$dark;
+    font-size: 150%;
+    text-decoration: none;
+  }
+
+  &__icon {
+    background-color: colors.$primary;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    padding: 0.5em;
+    margin-right: 1em;
+
+    &--email {
+      display: none;
+
+      @media screen and (min-width: 460px) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: typography.$spacer;
+}
+
+.fieldset {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  gap: typography.$spacer/2;
+}
+
+.date__label {
+  grid-column: 1/2;
+}
+
+.date__input {
+  grid-column: 2/-1;
+}
+
+.date__checkbox--label {
+  grid-column: 1/3;
+}
+
+.date__checkbox--input {
+  grid-column: 3/-1;
+}
+
+.date__checkbox--hidden {
+  display: none;
+}
+
+.date__checkbox--display {
+  display: inline;
+}
