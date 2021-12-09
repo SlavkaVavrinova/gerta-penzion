@@ -143,7 +143,7 @@ button {
   border-radius: 4px;
   font-weight: 600;
   font-family: "Montserrat", "Roboto", sans-serif;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.4rem;
 }
 
 .button__link {
@@ -280,7 +280,7 @@ sup {
 .mobile-hidden {
   display: none;
 }
-@media screen and (min-width: 305px) {
+@media screen and (min-width: 380px) {
   .mobile-hidden {
     display: inline-block;
   }
