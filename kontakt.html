@@ -3,9 +3,20 @@ layout: home.njk
 title: Kontakt Penzion Gerta Český Krumlov
 ---
 
-<main class="main">
+<header class="header">
   <h1>Kontakt</h1>
-  <h2 class="section__h2">Adresa</h2>
+  <picture class="header__picture"
+    ><source srcset="/images/gallery/penzion-gerta-ck.webp" />
+    <img
+      class="header__img"
+      src="/images/gallery/penzion-gerta-ck.jpg"
+      alt="Penzion Gerta Český Krumlov"
+    />
+  </picture>
+</header>
+
+<main class="main">
+  <h2 class="section__h2--small">Adresa</h2>
 
   <h3>Penzion Gerta</h3>
   <ul class="footer__address">
@@ -13,7 +24,25 @@ title: Kontakt Penzion Gerta Český Krumlov
     <li>Český Krumlov 381 01</li>
   </ul>
 
-  <h2 class="section__h2">Kontakt</h2>
+  <iframe
+    class="map-box--mobile"
+    style="border: none"
+    src="https://frame.mapy.cz/s/corotutudo"
+    width="400"
+    height="280"
+    frameborder="0"
+  ></iframe>
+
+  <iframe
+    class="map-box--xl"
+    style="border: none"
+    src="https://frame.mapy.cz/s/corotutudo"
+    width="700"
+    height="466"
+    frameborder="0"
+  ></iframe>
+
+  <h2 class="section__h2--small">Kontakt</h2>
   <ul class="footer__contact">
     <li>
       Telefon:
@@ -35,4 +64,10 @@ title: Kontakt Penzion Gerta Český Krumlov
     </li>
     <li>Recepce: 8:00 - 20:00</li>
   </ul>
+  <h2 class="section__h2--small">Fakturační údaje</h2>
+  <p>Gertruda Talířová</p>
+  <p>Středová 487</p>
+  <p>Český Krumlov 38101</p>
+  <p>IČ: 43822894</p>
+  <p>DIC: CZ6262111592</p>
 </main>

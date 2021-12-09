@@ -3,14 +3,16 @@ layout: home.njk
 title: Rezervace Penzion Gerta Český Krumlov
 ---
 
-<main class="main">
+<header class="header">
   <h1>Rezervace</h1>
   <p class="price">
     Oficiální web Penzionu Gerta<br />
     =<br />
     nejnižší cena
   </p>
-  <h2 class="room__h2">Telefonicky</h2>
+</header>
+<main class="main">
+  <h2 class="section__h2--small">Telefonicky</h2>
   <ul class="contact__list">
     <li class="contact__item">
       <a class="contact__link" href="tel:+420380711979">
@@ -32,7 +34,7 @@ title: Rezervace Penzion Gerta Český Krumlov
     </li>
   </ul>
 
-  <h2 class="room__h2">E-mailem</h2>
+  <h2 class="section__h2--small">E-mailem</h2>
   <ul class="contact__list">
     <li class="contact__item">
       <a class="contact__link" href="mailto: pension.gerta@seznam.cz">
@@ -44,7 +46,7 @@ title: Rezervace Penzion Gerta Český Krumlov
       >
     </li>
   </ul>
-  <h2 class="room__h2">On-line</h2>
+  <h2 class="section__h2--small">On-line</h2>
 
   <form method="post" action="" class="form">
     <label for="name"> Jméno a příjmení </label>
@@ -102,7 +104,7 @@ title: Rezervace Penzion Gerta Český Krumlov
     <label for="room">Požadovaný pokoj</label>
 
     <select name="room" id="room">
-      <option value="">Nepreferuji pokoj</option>
+      <option value="vyber">Nepreferuji pokoj</option>
       <option value="dvojluzkovy">Dvojlůžkový</option>
       <option value="terasa">Dvojlůžkový s kuchyňkou</option>
       <option value="triluzkovy">Třílůžkový</option>
@@ -110,8 +112,10 @@ title: Rezervace Penzion Gerta Český Krumlov
       <option value="mensi">Menší</option>
     </select>
 
-    <label for="persom"> Zadej počet osob </label>
-    <input type="text" name="person" />
+    <div class="room__info--display" id="room__info">
+      <label for="person"> Zadej počet osob </label>
+      <input type="text" name="person" />
+    </div>
 
     <label for="message">Chcete něco dalšího sdělit </label>
     <textarea name="message" id="message" rows="5" cols="20" maxlength="300">

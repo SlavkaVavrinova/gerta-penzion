@@ -1,38 +1,6 @@
 @use '../base/colors';
 @use '../base/typography';
 
-.contact {
-  &__list {
-    list-style-type: none;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-    color: colors.$dark;
-
-    text-decoration: none;
-  }
-
-  &__icon {
-    background-color: colors.$primary;
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    padding: 0.5em;
-    margin-right: 1em;
-
-    &--email {
-      display: none;
-
-      @media screen and (min-width: 330px) {
-        display: inline-block;
-      }
-    }
-  }
-}
-
 .form {
   display: grid;
   grid-template-columns: 1fr;
@@ -72,4 +40,14 @@
 
 .date__input--hidden {
   width: 100%;
+}
+
+.room__info {
+  &--display {
+    display: block;
+  }
+
+  &--hidden {
+    display: none;
+  }
 }
