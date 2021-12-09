@@ -1,0 +1,26 @@
+@use '../base/colors';
+@use '../base/typography';
+
+button {
+  text-transform: uppercase;
+  background-color: colors.$primary;
+  border: colors.$primary;
+  color: colors.$light;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: typography.$font-default;
+  padding: 0.5rem 1rem;
+}
+
+.button {
+  &__link {
+    color: colors.$light;
+    text-decoration: none;
+  }
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: colors.$secondary;
+  border: 1px solid colors.$secondary;
+}

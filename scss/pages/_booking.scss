@@ -11,7 +11,7 @@
     align-items: center;
     margin-bottom: 1em;
     color: colors.$dark;
-    font-size: 150%;
+
     text-decoration: none;
   }
 
@@ -26,7 +26,7 @@
     &--email {
       display: none;
 
-      @media screen and (min-width: 460px) {
+      @media screen and (min-width: 330px) {
         display: inline-block;
       }
     }
@@ -35,14 +35,13 @@
 
 .form {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: typography.$spacer;
+  grid-template-columns: 1fr;
+  gap: typography.$spacer/2;
 }
-
 .fieldset {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 2fr 3fr 1fr;
   gap: typography.$spacer/2;
 }
 
@@ -67,5 +66,10 @@
 }
 
 .date__checkbox--display {
-  display: inline;
+  display: inline-block;
+  grid-column: 1/-1;
+}
+
+.date__input--hidden {
+  width: 100%;
 }

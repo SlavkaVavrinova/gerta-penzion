@@ -1,8 +1,0 @@
-@use '../base/colors';
-@use '../base/typography';
-
-.button--secondary {
-  background-color: transparent;
-  color: colors.$secondary;
-  border: 1px solid colors.$secondary;
-}

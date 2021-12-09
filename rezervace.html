@@ -3,7 +3,7 @@ layout: home.njk
 title: Rezervace Penzion Gerta Český Krumlov
 ---
 
-<main>
+<main class="main">
   <h1>Rezervace</h1>
   <p class="price">
     Oficiální web Penzionu Gerta<br />
@@ -44,7 +44,7 @@ title: Rezervace Penzion Gerta Český Krumlov
       >
     </li>
   </ul>
-  <h2 class="room__h2">Rezervační formulář</h2>
+  <h2 class="room__h2">On-line</h2>
 
   <form method="post" action="" class="form">
     <label for="name"> Jméno a příjmení </label>
@@ -52,7 +52,6 @@ title: Rezervace Penzion Gerta Český Krumlov
       type="text"
       name="name"
       id="name"
-      maxlength="225"
       placeholder="Jméno Příjmení"
       autofocus
       required
@@ -85,19 +84,25 @@ title: Rezervace Penzion Gerta Český Krumlov
         class="date__checkbox--input"
         type="checkbox"
         name="date__checkbox"
-        id="tlacitkoCheckbox"
+        id="checkbox--date"
       />
 
-      <div class="date__checkbox--hidden" id="skrytyText">
-        <label for="date__text"> Zadej upřesňující údaj </label>
-        <input type="text" name="date__text" id="date__text" />
+      <div class="date__checkbox--hidden" id="checkbox__text--date">
+        <label class="date__text--hidden" for="date__text"
+          >Zadej upřesnění termínu
+        </label>
+        <input
+          class="date__input--hidden"
+          type="date__text"
+          name="date__text"
+        />
       </div>
     </fieldset>
 
     <label for="room">Požadovaný pokoj</label>
 
     <select name="room" id="room">
-      <option value="">Nemám preferovaný typ pokoje</option>
+      <option value="">Nepreferuji pokoj</option>
       <option value="dvojluzkovy">Dvojlůžkový</option>
       <option value="terasa">Dvojlůžkový s kuchyňkou</option>
       <option value="triluzkovy">Třílůžkový</option>

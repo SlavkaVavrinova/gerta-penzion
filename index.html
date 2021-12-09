@@ -5,23 +5,21 @@ title: Penzion Gerta Český Krumlov
 
 <header class="header">
   <h1>Penzion Gerta</h1>
-  <div class="header__left">
+  <div class="header__hero">
     <picture class="header__picture">
       <img
         class="header__img"
-        src="images/index/penzion-gerta-cesky-krumlov.jpg"
+        src="images/index/penzion-gerta-cesky-krumlov3.jpg"
         alt="Penzion Gerta Český Krumlov"
       />
+      <p class="header__motto">Jsme dovolená v Krumově</p>
     </picture>
-    <a href="/rezervace"
-      ><button class="header__button">rezervovat dovolenou</button></a
-    >
   </div>
-  <div class="header__right">
-    <p class="header__motto">Jsme dovolená v Českém Krumově</p>
-  </div>
+  <a href="/rezervace"
+    ><button class="button--hero">rezervovat dovolenou</button></a
+  >
 </header>
-<main>
+<main class="main">
   <p>Vítejte v rodinném Penzionu Gerta v Českém Krumlově.</p>
   <p>
     Jsme místo jako stvořené pro dovolenou s rodinou, přáteli i pro služební
@@ -102,10 +100,11 @@ title: Penzion Gerta Český Krumlov
         class="section__img"
         src="images/rooms/double-kitchen/dvojluzkovy-pokoj-s-kuchynkou.jpg"
         alt="Dvojlůžkový pokoj s kuchyňkou" /></picture
-    ><picture class="section__picture--right">
+    ><picture class="section__picture--right"
+      ><source srcset="images/rooms/double/vyhled-dvojluzkovy-pokoj-s.webp" />
       <img
         class="section__img section__img--right"
-        src="images/rooms/double/dvojluzkovy-pokoj.jpg"
+        src="images/rooms/double/vyhled-dvojluzkovy-pokoj.jpg"
         alt="Dvojlůžkový pokoj s výhledem na Český Krumlov"
     /></picture>
     <p class="section__motto">Otevřete dveře našich pokojů</p>
@@ -118,7 +117,9 @@ title: Penzion Gerta Český Krumlov
     <div class="section__buttons">
       <button class="button--secondary">O nás</button>
       <button class="section__button--primary">
-        <a class="button__link" href="/pokoje"> Prohlédnout pokoje</a>
+        <a class="button__link" href="/pokoje"
+          ><span class="mobile-hidden">Prohlédnout </span>pokoje</a
+        >
       </button>
     </div>
   </section>
@@ -167,7 +168,9 @@ title: Penzion Gerta Český Krumlov
 
     <div class="section__buttons">
       <button class="button--secondary">Tripadvisor</button>
-      <button class="section__button--primary">Booking.com</button>
+      <button class="section__button--primary">
+        Booking<span class="mobile-hidden">.com</span>
+      </button>
     </div>
   </section>
 
@@ -193,8 +196,12 @@ title: Penzion Gerta Český Krumlov
     </p>
 
     <div class="section__buttons">
-      <button class="section__button--secondary">Chata Růženka</button>
-      <button class="section__button--primary">Chata Gerta</button>
+      <button class="section__button--secondary">
+        <span class="mobile-hidden">Chata </span>Růženka
+      </button>
+      <button class="section__button--primary">
+        <span class="mobile-hidden">Chata </span>Gerta
+      </button>
     </div>
   </section>
 

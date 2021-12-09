@@ -2,7 +2,7 @@
 @use 'base/typography';
 @use 'layout/navigation';
 @use 'components/buttons.scss';
-@use 'pages/contact';
+@use 'pages/booking';
 
 html {
   box-sizing: border-box;
@@ -19,6 +19,7 @@ body {
   background-color: colors.$light;
   color: colors.$dark;
   line-height: 1.8;
+  margin: 0;
 }
 
 h1,
@@ -31,7 +32,6 @@ h1 {
   color: colors.$primary;
   text-align: center;
   font-size: 40px;
-  grid-column: 1/-1;
   margin: 0;
 }
 
@@ -50,56 +50,41 @@ sup {
   font-size: 75%;
 }
 
-.wrapper {
-  margin-top: 100px;
+.main {
   padding: typography.$spacer/2;
 }
 
-button {
-  text-transform: uppercase;
-  background-color: colors.$primary;
-  border: colors.$primary;
-  color: colors.$light;
-  border-radius: 4px;
-  font-weight: 600;
-  font-family: typography.$font-default;
-  padding: 1rem 2rem;
-}
-
-.button {
-  &__link {
-    color: colors.$light;
-    text-decoration: none;
+.mobile-hidden {
+  display: none;
+  @media screen and (min-width: 305px) {
+    display: inline-block;
   }
 }
 
 .header {
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: typography.$spacer;
-  position: relative;
+  text-align: center;
+  padding-top: 80px;
 
-  &__left {
+  &__hero {
     position: relative;
   }
 
   &__img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__motto {
-    font-size: 24px;
-    font-weight: 600;
-    text-align: center;
-    line-height: 1.5;
-  }
-
-  &__button {
     position: absolute;
-    right: -120px;
-    bottom: 0;
-    padding: 1rem 2rem;
+    bottom: typography.$spacer/2;
+    width: 100%;
+    text-align: center;
+    color: colors.$primmaryDark;
+    font-weight: 600;
+    margin-bottom: 0;
+    background-image: linear-gradient(colors.$light, transparent);
+    backdrop-filter: blur(6px);
   }
 }
 
@@ -251,18 +236,28 @@ button {
   font-size: 14px;
   color: colors.$secondary;
   margin-top: typography.$spacerL;
+
   &__up {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: typography.$spacer;
     background-color: colors.$primmaryVariant;
     border: 1px solid colors.$primary;
+    text-align: center;
+
+    @media screen and (min-width: 370px) {
+      text-align: left;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: typography.$spacer/2;
+    }
   }
 
   &__logo {
-    width: 100%;
-    padding-left: typography.$spacer;
-    margin-top: typography.$spacer;
+    display: none;
+
+    @media screen and (min-width: 370px) {
+      width: 100%;
+      padding-left: typography.$spacer/2;
+      margin-top: typography.$spacer;
+    }
   }
 
   &__title {
@@ -297,5 +292,11 @@ button {
 
   &__link {
     color: colors.$light;
+  }
+
+  &__heart {
+    width: 1rem;
+    height: 1rem;
+    margin: auto 0.25rem -0.2rem auto;
   }
 }
