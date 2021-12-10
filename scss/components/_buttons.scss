@@ -1,9 +1,10 @@
 @use '../base/colors';
 @use '../base/typography';
 
-button {
+.button {
   text-transform: uppercase;
   background-color: colors.$primary;
+  border: 2px solid colors.$primaryDark;
   color: colors.$light;
   font-weight: 600;
   font-family: typography.$font-default;
@@ -11,11 +12,14 @@ button {
   box-shadow: 3px 3px 5px colors.$secondary;
 
   &:hover {
-    box-shadow: 2px 2px 2px colors.$secondary;
+    background: linear-gradient(45deg, colors.$primaryDark, colors.$primary);
   }
-}
 
-.button {
+  &:active {
+    box-shadow: 1px 1px 3px colors.$secondary;
+    transform: translate(2px, 2px);
+  }
+
   &__link {
     color: colors.$light;
     text-decoration: none;
@@ -26,6 +30,10 @@ button {
   background-color: transparent;
   color: colors.$secondary;
   border: 1px solid colors.$secondary;
+
+  &:hover {
+    background: linear-gradient(45deg, colors.$primaryVariant, colors.$primary);
+  }
 }
 
 .section__buttons {
@@ -36,6 +44,6 @@ button {
   }
 }
 
-.room__button {
+.button--right {
   text-align: end;
 }

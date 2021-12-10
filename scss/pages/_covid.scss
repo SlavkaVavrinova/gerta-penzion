@@ -1,0 +1,6 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.covid {
+  font-size: typography.$small;
+}

@@ -8,6 +8,7 @@
 @use 'pages/booking';
 @use 'pages/contact';
 @use 'pages/rooms';
+@use 'pages/covid';
 
 html {
   box-sizing: border-box;
@@ -25,6 +26,7 @@ body {
   color: colors.$dark;
   line-height: 1.8;
   margin: 0;
+  position: relative;
 }
 
 h1,
@@ -144,4 +146,19 @@ h3 {
     font-size: 24px;
     font-weight: 600;
   }
+}
+
+.important-banner-text {
+  background-color: colors.$primaryVariant;
+  border-top: 1px solid colors.$primary;
+  border-bottom: 1px solid colors.$primary;
+  font-size: 24px;
+  font-weight: 600;
+  color: colors.$secondary;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.text-right {
+  text-align: end;
 }
