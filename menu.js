@@ -29,3 +29,19 @@ languageElm.addEventListener('click', () => {
 languageSelectElm.addEventListener('click', () => {
   languageSelectElm.classList.remove('language-select--display');
 });
+
+/*
+Zmenšení loga, pokud se budu hodně nudit. 2. část viz video Luděk
+
+const logoElm = document.querySelector('#logo');
+
+document.addEventListener('scroll', () => {
+  logoElm.classList.add('logo--small');
+});
+
+toto do css
+.logo--small {
+  height: 40px;
+  width: auto;
+}
+*/
