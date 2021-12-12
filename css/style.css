@@ -247,9 +247,10 @@
   text-align: center;
   font-weight: 600;
   margin-bottom: 0;
-  background-image: linear-gradient(#fffdf7, transparent);
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5), transparent);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
+  color: #fffdf7;
 }
 
 .button {
@@ -272,6 +273,10 @@
 .button__link {
   color: #fffdf7;
   text-decoration: none;
+  font-weight: 600;
+}
+.button__link--secondary {
+  color: #66462c;
 }
 
 .button--secondary {
@@ -441,6 +446,38 @@
   font-size: 14px;
 }
 
+.photoGallery__img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.photoGallery__info {
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 14px;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  transition: transform 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fffdf7;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.photoGallery__picture {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  margin-top: 24px;
+}
+
+.photoGallery__picture:hover .photoGallery__info {
+  transform: translateY(-100%);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -570,6 +607,47 @@ h3 {
 .section__motto {
   font-size: 24px;
   font-weight: 600;
+}
+
+.section__picture--cottage {
+  display: block;
+  position: relative;
+}
+
+.section__img--cottage {
+  transition: transform 0.3s;
+  display: block;
+}
+
+.section__info--cottage {
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 14px;
+  position: absolute;
+  width: 60%;
+  top: 24px;
+  left: 0;
+  margin: 0;
+  transition: transform 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fffdf7;
+  padding: 0.5rem 0;
+}
+
+.section__info--gerta {
+  margin-left: 40%;
+}
+
+.figcaption-display {
+  display: block;
+}
+
+.section__picture--cottage:hover .section__img--cottage {
+  transform: scale(1.1);
+}
+
+.section__picture--cottage:hover .section__info--cottage {
+  transform: scale(1.1);
 }
 
 .important-banner-text {

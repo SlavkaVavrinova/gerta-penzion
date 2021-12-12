@@ -9,6 +9,7 @@
 @use 'pages/contact';
 @use 'pages/rooms';
 @use 'pages/covid';
+@use 'pages/about';
 
 html {
   box-sizing: border-box;
@@ -146,6 +147,47 @@ h3 {
     font-size: 24px;
     font-weight: 600;
   }
+}
+
+.section__picture--cottage {
+  display: block;
+  position: relative;
+}
+
+.section__img--cottage {
+  transition: transform 0.3s;
+  display: block;
+}
+
+.section__info--cottage {
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  font-size: typography.$small;
+  position: absolute;
+  width: 60%;
+  top: typography.$spacer;
+  left: 0;
+  margin: 0;
+  transition: transform 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: colors.$light;
+  padding: 0.5rem 0;
+}
+
+.section__info--gerta {
+  margin-left: 40%;
+}
+
+.figcaption-display {
+  display: block;
+}
+
+.section__picture--cottage:hover .section__img--cottage {
+  transform: scale(1.1);
+}
+
+.section__picture--cottage:hover .section__info--cottage {
+  transform: scale(1.1);
 }
 
 .important-banner-text {

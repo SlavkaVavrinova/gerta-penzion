@@ -23,6 +23,11 @@
   &__link {
     color: colors.$light;
     text-decoration: none;
+    font-weight: 600;
+
+    &--secondary {
+      color: colors.$secondary;
+    }
   }
 }
 

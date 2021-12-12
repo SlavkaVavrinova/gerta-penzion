@@ -116,7 +116,9 @@ title: Penzion Gerta Český Krumlov
     </p>
 
     <div class="section__buttons">
-      <button class="button button--secondary">O nás</button>
+      <button class="button button--secondary">
+        <a class="button__link button__link--secondary" href="/onas">O nás</a>
+      </button>
       <button class="button">
         <a class="button__link" href="/pokoje"
           ><span class="mobile-hidden">Prohlédnout</span> pokoje</a
@@ -175,18 +177,30 @@ title: Penzion Gerta Český Krumlov
 
   <section class="section">
     <h2 class="section__h2">Chaty</h2>
-    <picture class="section__picture--left">
+    <picture class="section__picture--left section__picture--cottage">
       <img
-        class="section__img"
+        class="section__img section__img--cottage"
         src="images/index/chata-ruzenka.jpg"
-        alt="Chata Růženka" /></picture
-    ><picture class="section__picture--right">
+        alt="Chata Růženka"
+      />
+      <figcaption class="section__info--cottage">
+        Chata Růženka Zliv u Hluboké nad Vltavou
+      </figcaption></picture
+    ><picture
+      class="
+        section__picture--right
+        section__picture--cottage
+        section__picture--gerta
+      "
+    >
       <img
-        class="section__img section__img--right"
+        class="section__img section__img--right section__img--cottage"
         src="images/index/chata-gerta.JPG"
         alt="Chata Gerta"
       />
-      <figcaption class="section__figcaption">Gerta</figcaption></picture
+      <figcaption class="section__info--cottage section__info--gerta">
+        Chata Gerta Dolní Vltavice Lipno
+      </figcaption></picture
     >
     <p class="section__motto">Kam vyrazit příště</p>
     <p>
@@ -196,10 +210,16 @@ title: Penzion Gerta Český Krumlov
 
     <div class="section__buttons">
       <button class="button button--secondary">
+        <a
+          class="button__link--secondary"
+          href="http://www.chataruzenka.cz/"
+        ></a>
         <span class="mobile-hidden">Chata</span> Růženka
       </button>
       <button class="button">
-        <span class="mobile-hidden">Chata</span> Gerta
+        <a class="button__link" href="http://www.chatagerta.cz/uvod/">
+          <span class="mobile-hidden">Chata</span> Gerta</a
+        >
       </button>
     </div>
   </section>

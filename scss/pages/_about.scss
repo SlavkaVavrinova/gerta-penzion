@@ -1,0 +1,34 @@
+@use '../base/colors';
+@use '../base/typography';
+
+.photoGallery__img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.photoGallery__info {
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  font-size: typography.$small;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  transition: transform 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: colors.$light;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.photoGallery__picture {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  margin-top: typography.$spacer;
+}
+
+.photoGallery__picture:hover .photoGallery__info {
+  transform: translateY(-100%);
+}
