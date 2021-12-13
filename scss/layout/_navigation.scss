@@ -177,3 +177,90 @@
   right: 0;
   z-index: 10000;
 }
+
+@media screen and (min-width: 700px) {
+  .menu__item--map,
+  .menu__item--call,
+  .menu__item--menu,
+  .menu__item--home,
+  .menu__cross {
+    display: none;
+  }
+
+  .menu__up {
+    height: 0;
+  }
+
+  .menu__down {
+    height: 50px;
+    background-color: colors.$secondary;
+  }
+
+  .menu__up .menu__item {
+    background-color: colors.$secondary;
+  }
+
+  .menu__item--language {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    color: colors.$light;
+    line-height: 50px;
+  }
+
+  .icon-open-svg {
+    fill: colors.$light;
+  }
+  .menu__hide {
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 12.5vw);
+    grid-template-rows: 50px;
+    background-color: colors.$secondary;
+    width: 100%;
+    margin: 0 12.5vw 0 25vw;
+    padding: 0;
+    align-items: center;
+  }
+
+  .menu__link {
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu__item {
+    padding: 0;
+  }
+  .menu__item--covid {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: colors.$light;
+    color: colors.$secondary;
+  }
+
+  .menu__item--booking {
+    margin-top: 0;
+  }
+
+  .menu__item--contact {
+    position: absolute;
+    top: 0;
+    right: 12.5vw;
+    z-index: 1000;
+    line-height: 50px;
+    width: 12.5vw;
+  }
+
+  .menu__item--rooms {
+    position: absolute;
+    top: 0;
+    left: 12.5vw;
+    z-index: 1000;
+    background-color: colors.$secondary;
+    line-height: 50px;
+    width: 12.5vw;
+  }
+}
