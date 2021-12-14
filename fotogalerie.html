@@ -8,15 +8,55 @@ title: Fotogalerie
 </header>
 
 <main class="main">
-  <h2>Interier</h2>
+  <h2 class="section-room__h2">Interier</h2>
   <p>
     V přízemí pensionu je snídaňová místnost, kterou můžete použít i v průběhu
     dne na přípravu kávy, svačin nebo večerního posezení. Hosté z pokojů bez
     lednice si mohou uložit potraviny tam. K dispozici je jídelní židlička pro
     děti. V přízemí pensionu jsou toalety.
   </p>
-  <h2>Venkovní prostory</h2>
+  <div class="gallery">
+    <picture class="gallery__picture gallery__important"
+      ><source srcset="/images/gallery/snidanova-mistnost.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/snidanova-mistnost.jpg"
+        alt="Snídaňová místnost"
+    /></picture>
 
+    <picture class="gallery__picture"
+      ><source srcset="/images/gallery/vyhled.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/vyhled.jpg"
+        alt="Výhled z pokoje"
+    /></picture>
+
+    <picture class="gallery__picture gallery__high"
+      ><source srcset="/images/gallery/kuchynka.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/kuchynka.jpg"
+        alt="Snídaňová místnost"
+    /></picture>
+
+    <picture class="gallery__picture"
+      ><source srcset="/images/gallery/mistnost.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/mistnost.jpg"
+        alt="Snídaňová místnost"
+    /></picture>
+
+    <picture class="gallery__picture"
+      ><source srcset="/images/gallery/betlem.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/betlem.jpg"
+        alt="Snídaňová místnost"
+    /></picture>
+  </div>
+  <h2 class="section-room__h2">Venkovní prostory</h2>
   <p>
     V zahradě najdete různá místa k posezení, jezírko, bazén, mini koutek pro
     děti a gril. Bazén je zapuštěný, prosíme o hlídání dětí v jeho blízkosti.
@@ -28,11 +68,87 @@ title: Fotogalerie
     příjezdu. Gril je k dispozici vždy, ale rezervací se nic nepokazí. Máte
     jistotu v klidném pěkném večeru.
   </p>
+  <div class="gallery">
+    <picture class="gallery__picture gallery__important"
+      ><source srcset="/images/gallery/schody-do-bazenu.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/schody-do-bazenu.jpg"
+        alt="Bazén"
+    /></picture>
 
-  <h2>Pokoje</h2>
+    <picture class="gallery__picture"
+      ><source srcset="/images/gallery/bazen.webp" />
+      <img class="gallery__img" src="/images/gallery/bazen.jpg" alt="Bazén"
+    /></picture>
+
+    <picture class="gallery__picture gallery__high"
+      ><source srcset="/images/gallery/sezeni-spodni.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/sezeni-spodni.jpg"
+        alt="Posezení na zahradě s pergolou"
+    /></picture>
+
+    <picture class="gallery__picture"
+      ><source srcset="/images/gallery/jezirko.webp" />
+      <img class="gallery__img" src="/images/gallery/jezirko.jpg" alt="Jezírko"
+    /></picture>
+
+    <picture class="gallery__picture"
+      ><source srcset="/images/gallery/puvodni-bazen.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/puvodni-bazen.jpg"
+        alt="Zahrada - jezírko, pergoly, bazén"
+    /></picture>
+
+    <picture class="gallery__picture"
+      ><source srcset="/images/gallery/spodni-zahrada.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/spodni-zahrada.jpg"
+        alt="Zahrada - jezírko s posezením na spodní zahradě"
+    /></picture>
+
+    <picture class="gallery__picture gallery__high"
+      ><source srcset="/images/gallery/sezeni-predni.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/sezeni-predni.jpg"
+        alt="Posezení před penzionem"
+    /></picture>
+
+    <picture class="gallery__picture gallery__high"
+      ><source srcset="/images/gallery/vchod.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/vchod.jpg"
+        alt="Posezení před penzionem"
+    /></picture>
+
+    <picture class="gallery__picture"
+      ><source srcset="/images/gallery/zahrada-detsky-koutek.webp" />
+      <img
+        class="gallery__img"
+        src="/images/gallery/zahrada-detsky-koutek.jpg"
+        alt="Dětský koutek"
+    /></picture>
+  </div>
+  <h2 class="section-room__h2">Pokoje</h2>
+
   <h3>Dvojlůžkový pokoj</h3>
+  {% include 'partials/gallery-double.njk' %}
+
   <h3>Dvojlůžkový pokoj s kuchyňkou</h3>
+  {% include 'partials/gallery-double-kitchen.njk' %}
+
   <h3>Třílůžkový pokoj</h3>
+  {% include 'partials/gallery-tripple.njk' %}
+
   <h3>Rodinný pokoj</h3>
+  {% include 'partials/gallery-family.njk' %}
+
   <h3>Malý pokoj</h3>
+  {% include 'partials/gallery-small.njk' %}
 </main>

@@ -216,11 +216,11 @@
     position: fixed;
     top: 0;
     display: grid;
-    grid-template-columns: repeat(5, 12.5vw);
+    grid-template-columns: repeat(4, calc(100vw / 8));
     grid-template-rows: 50px;
     background-color: colors.$secondary;
     width: 100%;
-    margin: 0 12.5vw 0 25vw;
+    margin: 0 calc(100vw / 8 * 2) 0 calc(100vw / 8 * 2);
     padding: 0;
     align-items: center;
   }
@@ -237,8 +237,9 @@
     position: absolute;
     top: 70px;
     right: 20px;
-    background-color: colors.$light;
+    background-color: red;
     color: colors.$secondary;
+    z-index: 1000;
   }
 
   .menu__item--booking {
@@ -248,19 +249,23 @@
   .menu__item--contact {
     position: absolute;
     top: 0;
-    right: 12.5vw;
+    right: 65px;
     z-index: 1000;
     line-height: 50px;
-    width: 12.5vw;
+    width: calc(100vw / 8);
+
+    @media screen and (min-width: 880px) {
+      right: calc(100vw / 8);
+    }
   }
 
   .menu__item--rooms {
     position: absolute;
     top: 0;
-    left: 12.5vw;
+    left: calc(100vw / 8);
     z-index: 1000;
     background-color: colors.$secondary;
     line-height: 50px;
-    width: 12.5vw;
+    width: calc(100vw / 8);
   }
 }

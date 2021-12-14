@@ -51,44 +51,14 @@ title: Třílůžkový pokoj
   <section class="section-room">
     <h2 class="section-room__h2">Galerie</h2>
 
-       
-<div class="section-room__gallery">
-    <picture><source srcset="/images/rooms/tripple/triluzkovy.webp" />
-      <img class="section-room__img" src="/images/rooms/tripple/triluzkovy.jpg"
-        alt="Třílůžkový pokoj pohled na postele a sezení"
-    /></picture>
-
-    <picture><source srcset="/images/rooms/tripple/triluzkovy-pokoj.webp" />
-      <img class="section-room__img" src="/images/rooms/tripple/triluzkovy-pokoj.jpg"
-        alt="Třílůžkový pokoj pohled na postele"
-    /></picture>
-
-    <picture><source srcset="/images/rooms/tripple/triluzkovy-sezeni.webp" />
-      <img class="section-room__img" src="/images/rooms/tripple/triluzkovy-sezeni.jpg"
-        alt="Třílůžkový pokoj pohled na postele a stůl"
-    /></picture>
- 
-    <picture><source srcset="/images/rooms/tripple/tri-luzka.webp" />
-      <img class="section-room__img" src="/images/rooms/tripple/tri-luzka.jpg"
-        alt="Třílůžkový pokoj pohled na postele"
-    /></picture>
-
-       <picture><source srcset="/images/rooms/tripple/koupelna.webp" />
-      <img class="section-room__img" src="/images/rooms/tripple/koupelna.jpg"
-        alt="Třílůžkový pokoj - koupelna"
-    /></picture>
-
-    <picture><source srcset="/images/rooms/tripple/koupelna-triluzkovy.webp" />
-      <img class="section-room__img" src="/images/rooms/tripple/koupelna-triluzkovy.jpg"
-        alt="Třílůžkový pokoj - koupelna"
-    /></picture>
-</div>
+    {% include 'partials/gallery-tripple.njk' %}
+  
   </section>
 
   <div class="section__buttons">
-    <button class="button--secondary"><a class="button__link button__link--secondary" href="/pokoje">zpět pokoje</a></button>
+    <button class="button button--secondary"><a class="button__link button__link--secondary" href="/pokoje">zpět pokoje</a></button>
     <button class="button">
-     <a class="button__link" href="/rezervace/">rezervovat</a>
+     <a class="button__link" href="/pokoje/rodinny/">další pokoj</a>
     </button>
   </div>
 
