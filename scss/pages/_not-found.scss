@@ -1,6 +1,6 @@
 @use '../base/colors';
 @use '../base/typography';
-@use '../base/mixin';
+@use '../base/mixins';
 
 .not-found {
   position: relative;
@@ -17,7 +17,7 @@
   padding: typography.$spacer/2;
 }
 
-@media screen and (min-width: 700px) {
+@include mixins.tablet {
   .not-found {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -33,6 +33,7 @@
       height: 100%;
       object-fit: cover;
     }
+
     &__picture {
       &--high {
         grid-row: span 3;

@@ -9,6 +9,7 @@
   z-index: 10;
   line-height: 40px;
   box-shadow: 2px 2px 4px #b09c59;
+  background-color: #66462c;
 }
 .menu__logo {
   position: absolute;
@@ -41,6 +42,11 @@
 .menu__item--menu {
   padding-right: 0;
 }
+@media screen and (min-width: 350px) {
+  .menu__item--menu {
+    padding-right: 1rem;
+  }
+}
 .menu__link {
   color: #fffdf7;
   text-decoration: none;
@@ -53,7 +59,6 @@
   color: #66462c;
   margin: 0;
   padding: 0;
-  border-radius: 0 0 0 10px;
   font-size: 12px;
 }
 .menu__down {
@@ -68,9 +73,14 @@
 
 .menu__up .menu__item {
   background-color: #fffdf7;
+  margin: 0 0 0 -1px;
+}
+@media screen and (min-width: 350px) {
+  .menu__up .menu__item {
+    padding-right: 1rem;
+  }
 }
 
-.menu__link--covid,
 .menu__link--map,
 .menu__link--call {
   color: #66462c;
@@ -216,6 +226,7 @@
   .menu__link {
     text-align: center;
     width: 100%;
+    border: 0;
   }
 
   .menu__item {
@@ -226,7 +237,6 @@
     position: absolute;
     top: 70px;
     right: 20px;
-    background-color: red;
     color: #66462c;
     z-index: 1000;
   }
@@ -244,7 +254,7 @@
     width: calc(100vw / 8);
   }
 }
-@media screen and (min-width: 700px) and (min-width: 880px) {
+@media screen and (min-width: 700px) and (min-width: 880) {
   .menu__item--contact {
     right: calc(100vw / 8);
   }
@@ -573,6 +583,19 @@
   transform: translateY(-100%);
 }
 
+.gallery__img {
+  max-width: 100%;
+  max-height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 700px) {
+  .gallery__img {
+    max-height: none;
+  }
+}
 @media screen and (min-width: 700px) {
   .gallery {
     display: grid;
@@ -597,13 +620,9 @@
     grid-row: span 2;
   }
 }
-.gallery__img {
-  max-width: 100%;
-  max-height: 550px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  margin-bottom: 12px;
+
+.slider__img {
+  width: 100%;
 }
 
 .not-found {
@@ -708,6 +727,13 @@ h3 {
 
 .main {
   padding: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .benefits__list {

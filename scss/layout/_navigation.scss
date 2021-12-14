@@ -1,5 +1,6 @@
 @use '../base/colors';
 @use '../base/typography';
+@use '../base/mixins';
 
 .menu {
   text-transform: uppercase;
@@ -12,6 +13,7 @@
   z-index: 10;
   line-height: 40px;
   box-shadow: 2px 2px 4px colors.$primary;
+  background-color: colors.$secondary;
 
   &__logo {
     position: absolute;
@@ -47,6 +49,10 @@
 
     &--menu {
       padding-right: 0;
+
+      @include mixins.special(350px) {
+        padding-right: 1rem;
+      }
     }
   }
 
@@ -63,7 +69,6 @@
     color: colors.$secondary;
     margin: 0;
     padding: 0;
-    border-radius: 0 0 0 10px;
     font-size: 12px;
   }
 
@@ -80,9 +85,13 @@
 
 .menu__up .menu__item {
   background-color: colors.$light;
+  margin: 0 0 0 -1px;
+
+  @media screen and (min-width: 350px) {
+    padding-right: 1rem;
+  }
 }
 
-.menu__link--covid,
 .menu__link--map,
 .menu__link--call {
   color: colors.$secondary;
@@ -115,7 +124,6 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-
   width: 50px;
   height: 50px;
 }
@@ -178,7 +186,7 @@
   z-index: 10000;
 }
 
-@media screen and (min-width: 700px) {
+@include mixins.tablet {
   .menu__item--map,
   .menu__item--call,
   .menu__item--menu,
@@ -228,6 +236,7 @@
   .menu__link {
     text-align: center;
     width: 100%;
+    border: 0;
   }
 
   .menu__item {
@@ -237,7 +246,6 @@
     position: absolute;
     top: 70px;
     right: 20px;
-    background-color: red;
     color: colors.$secondary;
     z-index: 1000;
   }
@@ -254,7 +262,7 @@
     line-height: 50px;
     width: calc(100vw / 8);
 
-    @media screen and (min-width: 880px) {
+    @include mixins.special(880) {
       right: calc(100vw / 8);
     }
   }

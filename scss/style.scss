@@ -1,5 +1,7 @@
 @use 'base/colors';
 @use 'base/typography';
+@use 'base/mixins';
+
 @use 'layout/navigation';
 @use 'layout/footer';
 @use 'layout/header';
@@ -62,13 +64,20 @@ h3 {
 
 .mobile-hidden {
   display: none;
-  @media screen and (min-width: 380px) {
+
+  @include mixins.special(380px) {
     display: inline-block;
   }
 }
 
 .main {
   padding: typography.$spacer/2;
+
+  @include mixins.large {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .benefits {
