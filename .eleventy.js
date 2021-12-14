@@ -6,7 +6,6 @@ module.exports = function (eleventyConfig) {
 
   // Zkopírovat css/ to _site/css/
   eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy('css-glide');
   eleventyConfig.addPassthroughCopy('*.js');
 
   return {

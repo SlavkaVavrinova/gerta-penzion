@@ -44,3 +44,16 @@
 .slider__img {
   width: 100%;
 }
+
+.gallery--large-screen {
+  display: none;
+  @include mixins.tablet {
+    display: grid;
+  }
+}
+
+.gallery--mobile {
+  @include mixins.tablet {
+    display: none;
+  }
+}
