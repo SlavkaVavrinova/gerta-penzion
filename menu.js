@@ -30,18 +30,26 @@ languageSelectElm.addEventListener('click', () => {
   languageSelectElm.classList.remove('language-select--display');
 });
 
-/*
-Zmenšení loga, pokud se budu hodně nudit. 2. část viz video Luděk
-
+const scrollTopElm = document.querySelector('.scroll-top');
 const logoElm = document.querySelector('#logo');
+const menuDownElm = document.querySelector('.menu__down');
 
-document.addEventListener('scroll', () => {
-  logoElm.classList.add('logo--small');
+window.addEventListener('scroll', () => {
+  if (
+    document.body.scrollTop > 800 ||
+    document.documentElement.scrollTop > 800
+  ) {
+    scrollTopElm.style.display = 'block';
+    /*    logoElm.classList.add('logo--small');
+    menuDownElm.classList.add('menu__down--up');*/
+  } else {
+    scrollTopElm.style.display = 'none';
+    /*   logoElm.classList.remove('logo--small');
+    menuDownElm.classList.remove('menu__down--up');*/
+  }
 });
 
-toto do css
-.logo--small {
-  height: 40px;
-  width: auto;
-}
-*/
+scrollTopElm.addEventListener('click', () => {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
