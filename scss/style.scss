@@ -112,7 +112,7 @@ h3 {
     &--small {
       margin-left: 10vw;
       position: relative;
-      padding-left: 1em;
+      padding-left: 1rem;
     }
   }
   &__h2::before {
@@ -242,7 +242,7 @@ h3 {
     transform: translate(2px, 2px);
   }
 }
-
+/*
 .logo--small {
   position: fixed;
   height: 50px;
@@ -256,3 +256,4 @@ h3 {
   top: 0;
   right: 0;
 }
+*/

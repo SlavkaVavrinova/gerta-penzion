@@ -54,25 +54,42 @@ title: Rezervace Penzion Gerta Český Krumlov
   </ul>
   <h2 class="section__h2--small">On-line</h2>
 
-  <form method="post" action="" class="form">
-    <label for="name"> Jméno a příjmení </label>
-    <input
-      type="text"
-      name="name"
-      id="name"
-      placeholder="Jméno Příjmení"
-      autofocus
-      required
-    />
+  <form id="reservationForm" class="form">
+    <div class="form__field">
+      <label class="form__label" for="name">
+        Jméno a příjmení <span class="required">*</span></label
+      >
+      <input
+        class="form__input"
+        type="text"
+        name="name"
+        id="name"
+        autofocus
+        required
+      />
+    </div>
 
-    <label for="email"> E-mail </label>
-    <input type="email" name="email" id="email" required value="@" />
+    <div class="form__field">
+      <label class="form__label" for="email">
+        E-mail <span class="required">*</span></label
+      >
+      <input
+        class="form__input"
+        type="email"
+        name="email"
+        id="email"
+        required
+        value="@"
+      />
+    </div>
 
-    <label for="tel"> Telefon </label>
-    <input type="tel" name="tel" id="tel" value="+420" />
+    <div class="form__field">
+      <label class="form__label" for="tel"> Telefon </label>
+      <input class="form__input" type="tel" name="tel" id="tel" value="+420" />
+    </div>
 
     <fieldset class="fieldset">
-      <legend>Datum rezervace</legend>
+      <legend class="form__legend">Datum rezervace</legend>
 
       <label class="date__label" for="date__from"> Od </label>
       <input
@@ -85,49 +102,67 @@ title: Rezervace Penzion Gerta Český Krumlov
       <label class="date__label" for="date__to"> Do </label>
       <input class="date__input" type="date" name="date__to" id="date__to" />
 
-      <label class="date__checkbox--label" for="date__checkbox">
-        Neznám přesný termín
-      </label>
       <input
         class="date__checkbox--input"
         type="checkbox"
         name="date__checkbox"
         id="checkbox--date"
       />
+      <label class="date__checkbox--label" for="date__checkbox">
+        Neznám přesný termín
+      </label>
 
       <div class="date__checkbox--hidden" id="checkbox__text--date">
-        <label class="date__text--hidden" for="date__text"
+        <label
+          class="form__label form__label--checkbox date__text--hidden"
+          for="date__text"
           >Zadej upřesnění termínu
         </label>
         <input
-          class="date__input--hidden"
+          class="form__input date__input--hidden"
           type="date__text"
           name="date__text"
         />
       </div>
     </fieldset>
 
-    <label for="room">Požadovaný pokoj</label>
-
-    <select name="room" id="room">
-      <option value="vyber">Nepreferuji pokoj</option>
-      <option value="dvojluzkovy">Dvojlůžkový</option>
-      <option value="terasa">Dvojlůžkový s kuchyňkou</option>
-      <option value="triluzkovy">Třílůžkový</option>
-      <option value="rodinny">Rodinný</option>
-      <option value="mensi">Menší</option>
-    </select>
-
-    <div class="room__info--display" id="room__info">
-      <label for="person"> Zadej počet osob </label>
-      <input type="text" name="person" />
+    <div class="form__field">
+      <label class="form__label" for="room">Požadovaný pokoj</label>
+      <select class="form__select" name="room" id="room">
+        <option value="vyber">Nepreferuji pokoj</option>
+        <option value="dvojluzkovy">Dvojlůžkový</option>
+        <option value="terasa">Dvojlůžkový s kuchyňkou</option>
+        <option value="triluzkovy">Třílůžkový</option>
+        <option value="rodinny">Rodinný</option>
+        <option value="mensi">Menší</option>
+      </select>
     </div>
-
-    <label for="message">Chcete něco dalšího sdělit </label>
-    <textarea name="message" id="message" rows="5" cols="20" maxlength="300">
-    </textarea>
-    <button class="button" type="submit" name="send" id="send">
-      Odeslat <span class="mobile-hidden"> nezávaznou </span> poptávku
-    </button>
+    <div class="form__field">
+      <div class="room__info--display" id="room__info">
+        <label class="form__label" for="person">
+          Zadej počet osob/upřesnění
+        </label>
+        <input class="form__input" type="text" name="person" />
+      </div>
+    </div>
+    <div class="form__field">
+      <label class="form__label" for="message"
+        >Chcete něco dalšího sdělit
+      </label>
+      <textarea
+        class="form__textarea"
+        name="message"
+        id="message"
+        rows="5"
+        cols="20"
+        maxlength="300"
+      >
+      </textarea>
+    </div>
+    <div class="form__button">
+      <button class="button" type="submit" name="send" id="send">
+        Odeslat <span class="mobile-hidden"> nezávaznou </span> poptávku
+      </button>
+    </div>
   </form>
 </main>

@@ -21,3 +21,23 @@ roomElm.addEventListener('change', (event) => {
     roomTextElm.classList.remove('room__info--hidden');
   }
 });
+
+const formElm = document.querySelector('#reservationForm');
+
+if (formElm) {
+  formElm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    fetch('rezervace.php', {
+      method: 'POST',
+      body: new FormData(formElm),
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        formElm.style.display = 'none';
+        const formMessage = document.createElement('div');
+        formMessage.classList.add('form-message');
+        formMessage.textContent = json.message;
+        formElm.parentElement.appendChild(formMessage);
+      });
+  });
+}
