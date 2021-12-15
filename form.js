@@ -22,6 +22,18 @@ roomElm.addEventListener('change', (event) => {
   }
 });
 
+const emailElm = document.querySelector('#email');
+const emailErrorElm = document.querySelector('#email__error-message');
+
+emailElm.addEventListener('change', (event) => {
+  if (validator.isEmail(event.target.value)) {
+    emailElm.classList.add('email__valid');
+  } else {
+    emailElm.classList.add('email__invalid');
+    emailErrorElm.textContent = 'Neplatný email';
+  }
+});
+
 const formElm = document.querySelector('#reservationForm');
 
 if (formElm) {

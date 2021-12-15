@@ -144,3 +144,19 @@
     display: none;
   }
 }
+
+.email__valid {
+  border: 2px solid colors.$success;
+  border-left: 5px solid colors.$success;
+}
+
+.email__invalid {
+  border: 2px solid colors.$error;
+  border-left: 5px solid colors.$error;
+}
+
+.form-message {
+  display: block;
+  color: red;
+  z-index: 100000;
+}

@@ -47,6 +47,7 @@
 
 .gallery--large-screen {
   display: none;
+
   @include mixins.tablet {
     display: grid;
   }
