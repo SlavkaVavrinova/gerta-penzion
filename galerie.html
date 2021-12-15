@@ -1,10 +1,10 @@
 ---
 layout: home.njk
-title: Fotogalerie
+title: Galerie
 ---
 
 <header class="header">
-  <h1>Fotogalerie</h1>
+  <h1>Galerie</h1>
 </header>
 
 <main class="main">
@@ -329,23 +329,35 @@ title: Fotogalerie
 
   <h3>Dvojlůžkový pokoj</h3>
   <button class="button button--hero foto__button--double">Ukázat fotky</button>
-  <div class="foto__hidden--double">{% include 'partials/gallery-double.njk' %}</div>
+  <div class="foto__hidden--double">
+    {% include 'partials/gallery-double.njk' %}
+  </div>
 
   <h3>Dvojlůžkový pokoj s kuchyňkou</h3>
-  <button class="button button--hero foto__button--kitchen">Ukázat fotky</button>
+  <button class="button button--hero foto__button--kitchen">
+    Ukázat fotky
+  </button>
   <div class="foto__hidden--kitchen">
     {% include 'partials/gallery-double-kitchen.njk' %}
   </div>
 
   <h3>Třílůžkový pokoj</h3>
-  <button class="button button--hero foto__button--tripple">Ukázat fotky</button>
-  <div class="foto__hidden--tripple">{% include 'partials/gallery-tripple.njk' %}</div>
+  <button class="button button--hero foto__button--tripple">
+    Ukázat fotky
+  </button>
+  <div class="foto__hidden--tripple">
+    {% include 'partials/gallery-tripple.njk' %}
+  </div>
 
   <h3>Rodinný pokoj</h3>
   <button class="button button--hero foto__button--family">Ukázat fotky</button>
-  <div class="foto__hidden--family">{% include 'partials/gallery-family.njk' %}</div>
+  <div class="foto__hidden--family">
+    {% include 'partials/gallery-family.njk' %}
+  </div>
 
   <h3>Malý pokoj</h3>
   <button class="button button--hero foto__button--small">Ukázat fotky</button>
-  <div class="foto__hidden--small">{% include 'partials/gallery-small.njk' %}</div>
+  <div class="foto__hidden--small">
+    {% include 'partials/gallery-small.njk' %}
+  </div>
 </main>
