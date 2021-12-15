@@ -51,9 +51,11 @@
 
   &__title {
     margin-top: typography.$spacer;
+
     @include mixins.special(1000px) {
       margin-top: 0;
       margin-bottom: 0;
+      font-size: 24px;
     }
   }
 

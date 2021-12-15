@@ -18,145 +18,174 @@ title: Rezervace Penzion Gerta Český Krumlov
     Preferujete rychlost, zavolejte nebo vyplňte náš formulář a my se ozveme
     obratem.
   </p>
-  <h2 class="section__h2--small">Telefonicky</h2>
-  <ul class="contact__list">
-    <li class="contact__item">
-      <a class="contact__link" href="tel:+420380711979">
-        <img
-          class="contact__icon"
-          src="/images/contact/phone.svg"
-          alt="Ikona telefon"
-        />+420 380 711 979</a
-      >
-    </li>
-    <li class="contact__item">
-      <a class="contact__link" href="tel:+420777078309">
-        <img
-          class="contact__icon"
-          src="/images/contact/mobile.svg"
-          alt="Ikona mobilní telefon"
-        />+420 777 078 309</a
-      >
-    </li>
-  </ul>
-
-  <h2 class="section__h2--small">E-mailem</h2>
-  <ul class="contact__list">
-    <li class="contact__item">
-      <a class="contact__link" href="mailto: pension.gerta@seznam.cz">
-        <img
-          class="contact__icon contact__icon--email"
-          src="/images/contact/email.svg"
-          alt="Ikona e-mail"
-        />pension.gerta@seznam.cz</a
-      >
-    </li>
-  </ul>
-  <h2 class="section__h2--small">On-line</h2>
-
-  <form id="reservationForm" class="form">
-    <div class="form__field">
-      <label class="form__label" for="name">
-        Jméno a příjmení <span class="required">*</span></label
-      >
-      <input class="form__input" type="text" name="name" id="name" required />
-    </div>
-
-    <div class="form__field">
-      <label class="form__label" for="email">
-        E-mail <span class="required">*</span></label
-      >
-      <input
-        class="form__input"
-        type="email"
-        name="email"
-        id="email"
-        required
-        value="@"
-      />
-    </div>
-
-    <div class="form__field">
-      <label class="form__label" for="tel"> Telefon </label>
-      <input class="form__input" type="tel" name="tel" id="tel" value="+420" />
-    </div>
-
-    <fieldset class="fieldset">
-      <legend class="form__legend">Datum rezervace</legend>
-
-      <label class="date__label" for="date__from"> Od </label>
-      <input
-        class="date__input"
-        type="date"
-        name="date__form"
-        id="date__from"
-      />
-
-      <label class="date__label" for="date__to"> Do </label>
-      <input class="date__input" type="date" name="date__to" id="date__to" />
-
-      <input
-        class="date__checkbox--input"
-        type="checkbox"
-        name="date__checkbox"
-        id="checkbox--date"
-      />
-      <label class="date__checkbox--label" for="date__checkbox">
-        Neznám přesný termín
-      </label>
-
-      <div class="date__checkbox--hidden" id="checkbox__text--date">
-        <label
-          class="form__label form__label--checkbox date__text--hidden"
-          for="date__text"
-          >Zadej upřesnění termínu
-        </label>
-        <input
-          class="form__input date__input--hidden"
-          type="date__text"
-          name="date__text"
-        />
+  <div class="grid-two-column">
+    <section class="section">
+      <h2 class="section__h2--small">Telefonicky</h2>
+      <div class="section__center">
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a class="contact__link" href="tel:+420380711979">
+              <img
+                class="contact__icon"
+                src="/images/contact/phone.svg"
+                alt="Ikona telefon"
+              />+420 380 711 979</a
+            >
+          </li>
+          <li class="contact__item">
+            <a class="contact__link" href="tel:+420777078309">
+              <img
+                class="contact__icon"
+                src="/images/contact/mobile.svg"
+                alt="Ikona mobilní telefon"
+              />+420 777 078 309</a
+            >
+          </li>
+        </ul>
       </div>
-    </fieldset>
-
-    <div class="form__field">
-      <label class="form__label" for="room">Požadovaný pokoj</label>
-      <select class="form__select" name="room" id="room">
-        <option value="vyber">Nepreferuji pokoj</option>
-        <option value="dvojluzkovy">Dvojlůžkový</option>
-        <option value="terasa">Dvojlůžkový s kuchyňkou</option>
-        <option value="triluzkovy">Třílůžkový</option>
-        <option value="rodinny">Rodinný</option>
-        <option value="mensi">Menší</option>
-      </select>
-    </div>
-    <div class="form__field">
-      <div class="room__info--display" id="room__info">
-        <label class="form__label" for="person">
-          Zadej počet osob/upřesnění
-        </label>
-        <input class="form__input" type="text" name="person" />
+    </section>
+    <section class="section">
+      <h2 class="section__h2--small">E-mailem</h2>
+      <div class="section__center">
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a class="contact__link" href="mailto: pension.gerta@seznam.cz">
+              <img
+                class="contact__icon contact__icon--email"
+                src="/images/contact/email.svg"
+                alt="Ikona e-mail"
+              />pension.gerta@seznam.cz</a
+            >
+          </li>
+        </ul>
       </div>
+    </section>
+  </div>
+  <section class="section">
+    <h2 class="section__h2">On-line</h2>
+    <div class="section__center">
+      <form id="reservationForm" class="form">
+        <div class="form__field">
+          <label class="form__label" for="name">
+            Jméno a příjmení <span class="required">*</span></label
+          >
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            id="name"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="email">
+            E-mail <span class="required">*</span></label
+          >
+          <input
+            class="form__input"
+            type="email"
+            name="email"
+            id="email"
+            required
+            value="@"
+          />
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="tel"> Telefon </label>
+          <input
+            class="form__input"
+            type="tel"
+            name="tel"
+            id="tel"
+            value="+420"
+          />
+        </div>
+
+        <fieldset class="fieldset">
+          <legend class="form__legend">Datum rezervace</legend>
+
+          <label class="date__label" for="date__from"> Od </label>
+          <input
+            class="date__input"
+            type="date"
+            name="date__form"
+            id="date__from"
+          />
+
+          <label class="date__label" for="date__to"> Do </label>
+          <input
+            class="date__input"
+            type="date"
+            name="date__to"
+            id="date__to"
+          />
+
+          <input
+            class="date__checkbox--input"
+            type="checkbox"
+            name="date__checkbox"
+            id="checkbox--date"
+          />
+          <label class="date__checkbox--label" for="date__checkbox">
+            Neznám přesný termín
+          </label>
+
+          <div class="date__checkbox--hidden" id="checkbox__text--date">
+            <label
+              class="form__label form__label--checkbox date__text--hidden"
+              for="date__text"
+              >Zadej upřesnění termínu
+            </label>
+            <input
+              class="form__input date__input--hidden"
+              type="date__text"
+              name="date__text"
+            />
+          </div>
+        </fieldset>
+
+        <div class="form__field">
+          <label class="form__label" for="room">Požadovaný pokoj</label>
+          <select class="form__select" name="room" id="room">
+            <option value="vyber">Nepreferuji pokoj</option>
+            <option value="dvojluzkovy">Dvojlůžkový</option>
+            <option value="terasa">Dvojlůžkový s kuchyňkou</option>
+            <option value="triluzkovy">Třílůžkový</option>
+            <option value="rodinny">Rodinný</option>
+            <option value="mensi">Menší</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <div class="room__info--display" id="room__info">
+            <label class="form__label" for="person">
+              Zadej počet osob/upřesnění
+            </label>
+            <input class="form__input" type="text" name="person" />
+          </div>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="message"
+            >Chcete něco dalšího sdělit
+          </label>
+          <textarea
+            class="form__textarea"
+            name="message"
+            id="message"
+            rows="5"
+            cols="20"
+            maxlength="300"
+          >
+          </textarea>
+        </div>
+        <div id="email__error-message"></div>
+        <div class="form__button">
+          <button class="button" type="submit" name="send" id="send">
+            Odeslat <span class="mobile-hidden"> nezávaznou </span> poptávku
+          </button>
+        </div>
+      </form>
     </div>
-    <div class="form__field">
-      <label class="form__label" for="message"
-        >Chcete něco dalšího sdělit
-      </label>
-      <textarea
-        class="form__textarea"
-        name="message"
-        id="message"
-        rows="5"
-        cols="20"
-        maxlength="300"
-      >
-      </textarea>
-    </div>
-    <div id="email__error-message"></div>
-    <div class="form__button">
-      <button class="button" type="submit" name="send" id="send">
-        Odeslat <span class="mobile-hidden"> nezávaznou </span> poptávku
-      </button>
-    </div>
-  </form>
+  </section>
 </main>

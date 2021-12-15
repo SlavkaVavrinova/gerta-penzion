@@ -14,6 +14,11 @@
     margin-left: 10vw;
     padding-left: 1rem;
   }
+
+  @include mixins.special(900px) {
+    max-width: 600px;
+  }
+
   &__button {
     display: flex;
     justify-content: center;

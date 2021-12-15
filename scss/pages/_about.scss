@@ -1,5 +1,6 @@
 @use '../base/colors';
 @use '../base/typography';
+@use '../base/mixins';
 
 .photoGallery__img {
   width: 100%;
@@ -31,4 +32,17 @@
 
 .photoGallery__picture:hover .photoGallery__info {
   transform: translateY(-100%);
+}
+
+.section-room__gallery {
+  grid-column: 2/-1;
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: typography.$spacer;
+  }
+  @include mixins.large {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

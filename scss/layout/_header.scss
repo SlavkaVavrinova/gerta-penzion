@@ -43,7 +43,7 @@
       top: 0;
       right: 0;
       backdrop-filter: blur(2px);
-      font-size: typography.$titleTablet;
+
       background-image: linear-gradient(
         transparent,
         transparent,
@@ -56,10 +56,6 @@
     }
     @include mixins.special(900px) {
       padding-right: 1em;
-    }
-
-    @include mixins.large {
-      font-size: typography.$titleWeb;
     }
   }
 
@@ -130,11 +126,12 @@
   background-color: colors.$primaryVariant;
   border-top: 1px solid colors.$primary;
   border-bottom: 1px solid colors.$primary;
-  font-size: 24px;
+  font-size: typography.$large;
   font-weight: 600;
   color: colors.$secondary;
   text-align: center;
   padding: 1em 0;
+
   &__link {
     color: colors.$secondary;
     text-decoration: none;
@@ -148,12 +145,14 @@
   &__contact {
     @include mixins.tablet {
       grid-column: 2/-1;
-      align-self: flex-end;
+      align-self: center;
       margin-bottom: 0;
       margin-top: 120px;
+      font-size: typography.$normal;
     }
     @include mixins.large {
       margin-top: 200px;
+      font-size: typography.$large;
     }
   }
 }

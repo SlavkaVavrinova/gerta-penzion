@@ -33,19 +33,18 @@
 }
 
 .map-box {
-  &--xl {
-    display: none;
-  }
-
-  @media screen and (min-width: 500px) {
-    display: inline-block;
-    width: 100%;
-  }
-
   &--mobile {
     width: 100%;
+
     @media screen and (min-width: 500px) {
       display: none;
+    }
+  }
+  &--xl {
+    display: none;
+    @media screen and (min-width: 500px) {
+      display: inline-block;
+      width: 100%;
     }
   }
 }
