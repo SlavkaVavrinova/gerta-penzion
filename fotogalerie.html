@@ -328,17 +328,24 @@ title: Fotogalerie
   <h2 class="section-room__h2">Pokoje</h2>
 
   <h3>Dvojlůžkový pokoj</h3>
-  {% include 'partials/gallery-double.njk' %}
+  <button class="button button--hero foto__button--double">Ukázat fotky</button>
+  <div class="foto__hidden--double">{% include 'partials/gallery-double.njk' %}</div>
 
   <h3>Dvojlůžkový pokoj s kuchyňkou</h3>
-  {% include 'partials/gallery-double-kitchen.njk' %}
+  <button class="button button--hero foto__button--kitchen">Ukázat fotky</button>
+  <div class="foto__hidden--kitchen">
+    {% include 'partials/gallery-double-kitchen.njk' %}
+  </div>
 
   <h3>Třílůžkový pokoj</h3>
-  {% include 'partials/gallery-tripple.njk' %}
+  <button class="button button--hero foto__button--tripple">Ukázat fotky</button>
+  <div class="foto__hidden--tripple">{% include 'partials/gallery-tripple.njk' %}</div>
 
   <h3>Rodinný pokoj</h3>
-  {% include 'partials/gallery-family.njk' %}
+  <button class="button button--hero foto__button--family">Ukázat fotky</button>
+  <div class="foto__hidden--family">{% include 'partials/gallery-family.njk' %}</div>
 
   <h3>Malý pokoj</h3>
-  {% include 'partials/gallery-small.njk' %}
+  <button class="button button--hero foto__button--small">Ukázat fotky</button>
+  <div class="foto__hidden--small">{% include 'partials/gallery-small.njk' %}</div>
 </main>

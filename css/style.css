@@ -579,6 +579,22 @@
   display: none;
 }
 
+.email__valid {
+  border: 2px solid #326771;
+  border-left: 5px solid #326771;
+}
+
+.email__invalid {
+  border: 2px solid #bb0a21;
+  border-left: 5px solid #bb0a21;
+}
+
+.form-message {
+  display: block;
+  color: red;
+  z-index: 100000;
+}
+
 .contact__list {
   list-style-type: none;
 }
@@ -763,6 +779,23 @@
   .gallery--mobile {
     display: none;
   }
+}
+
+.foto__hidden--double,
+.foto__hidden--kitchen,
+.foto__hidden--tripple,
+.foto__hidden--family,
+.foto__hidden--small {
+  display: none;
+}
+
+.foto__display--double,
+.foto__display--kitchen,
+.foto__display--tripple,
+.foto__display--family,
+.foto__display--small {
+  display: block;
+  margin-top: 24px;
 }
 
 .not-found {

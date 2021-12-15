@@ -58,3 +58,20 @@
     display: none;
   }
 }
+
+.foto__hidden--double,
+.foto__hidden--kitchen,
+.foto__hidden--tripple,
+.foto__hidden--family,
+.foto__hidden--small {
+  display: none;
+}
+
+.foto__display--double,
+.foto__display--kitchen,
+.foto__display--tripple,
+.foto__display--family,
+.foto__display--small {
+  display: block;
+  margin-top: typography.$spacer;
+}
