@@ -33,3 +33,14 @@
     color: colors.$light;
   }
 }
+
+.important-banner-text {
+  background-color: colors.$primaryVariant;
+  border-top: 1px solid colors.$primary;
+  border-bottom: 1px solid colors.$primary;
+  font-size: 24px;
+  font-weight: 600;
+  color: colors.$secondary;
+  text-align: center;
+  padding: 1em 0;
+}

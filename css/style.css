@@ -400,6 +400,42 @@
   color: #fffdf7;
 }
 
+.important-banner-text {
+  background-color: #f9ecc1;
+  border-top: 1px solid #b09c59;
+  border-bottom: 1px solid #b09c59;
+  font-size: 24px;
+  font-weight: 600;
+  color: #66462c;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: #b09c59;
+  border: 2px solid #715d18;
+  box-shadow: 3px 3px 5px #66462c;
+}
+.scroll-top__icon {
+  fill: #fffdf7;
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(180deg);
+}
+.scroll-top:hover {
+  background: linear-gradient(45deg, #715d18, #b09c59);
+}
+.scroll-top:active {
+  box-shadow: 1px 1px 3px #66462c;
+  transform: translate(2px, 2px);
+}
+
 .button {
   text-transform: uppercase;
   background-color: #b09c59;
@@ -898,6 +934,10 @@ h3 {
   }
 }
 
+.text-right {
+  text-align: end;
+}
+
 .main {
   padding: 12px;
 }
@@ -957,17 +997,25 @@ h3 {
   height: 1em;
   border-bottom: 1px solid #66462c;
 }
-.section__picture {
+.section__picture--cottage {
+  display: block;
   position: relative;
 }
-.section__picture {
-  position: absolute;
+.section__picture--cottage:hover .section__img--cottage {
+  transform: scale(1.1);
+}
+.section__picture--cottage:hover .section__info--cottage {
+  transform: scale(1.1);
 }
 .section__img {
   width: 60%;
 }
 .section__img--booking {
   width: 100%;
+}
+.section__img--cottage {
+  transition: transform 0.3s;
+  display: block;
 }
 .section__img--right {
   margin-left: 40%;
@@ -978,17 +1026,6 @@ h3 {
   font-size: 24px;
   font-weight: 600;
 }
-
-.section__picture--cottage {
-  display: block;
-  position: relative;
-}
-
-.section__img--cottage {
-  transition: transform 0.3s;
-  display: block;
-}
-
 .section__info--cottage {
   text-align: center;
   margin: 0.5rem 0 1rem 0;
@@ -1003,75 +1040,10 @@ h3 {
   color: #fffdf7;
   padding: 0.5rem 0;
 }
-
 .section__info--gerta {
   margin-left: 40%;
 }
 
 .figcaption-display {
   display: block;
-}
-
-.section__picture--cottage:hover .section__img--cottage {
-  transform: scale(1.1);
-}
-
-.section__picture--cottage:hover .section__info--cottage {
-  transform: scale(1.1);
-}
-
-.important-banner-text {
-  background-color: #f9ecc1;
-  border-top: 1px solid #b09c59;
-  border-bottom: 1px solid #b09c59;
-  font-size: 24px;
-  font-weight: 600;
-  color: #66462c;
-  text-align: center;
-  padding: 1em 0;
-}
-
-.text-right {
-  text-align: end;
-}
-
-.scroll-top {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  width: 3rem;
-  height: 3rem;
-  padding: 0.5rem;
-  background-color: #b09c59;
-  border: 2px solid #715d18;
-  box-shadow: 3px 3px 5px #66462c;
-}
-.scroll-top__icon {
-  fill: #fffdf7;
-  width: 2rem;
-  height: 2rem;
-  transform: rotate(180deg);
-}
-.scroll-top:hover {
-  background: linear-gradient(45deg, #715d18, #b09c59);
-}
-.scroll-top:active {
-  box-shadow: 1px 1px 3px #66462c;
-  transform: translate(2px, 2px);
-}
-
-/*
-.logo--small {
-  position: fixed;
-  height: 50px;
-  width: auto;
-  top: 0;
-  left: 0;
-  padding: 5px;
-}
-.menu__down--up {
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

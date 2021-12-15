@@ -5,6 +5,7 @@
 @use 'layout/navigation';
 @use 'layout/footer';
 @use 'layout/header';
+@use 'layout/scroll-top';
 
 @use 'components/buttons.scss';
 @use 'pages/booking';
@@ -70,6 +71,9 @@ h3 {
   }
 }
 
+.text-right {
+  text-align: end;
+}
 .main {
   padding: typography.$spacer/2;
 
@@ -134,17 +138,30 @@ h3 {
     height: 1em;
     border-bottom: 1px solid colors.$secondary;
   }
-  &__picture {
-    position: relative;
-  }
-  &__picture {
-    position: absolute;
-  }
 
+  &__picture {
+    &--cottage {
+      display: block;
+      position: relative;
+
+      &:hover .section__img--cottage {
+        transform: scale(1.1);
+      }
+
+      &:hover .section__info--cottage {
+        transform: scale(1.1);
+      }
+    }
+  }
   &__img {
     width: 60%;
     &--booking {
       width: 100%;
+    }
+
+    &--cottage {
+      transition: transform 0.3s;
+      display: block;
     }
   }
 
@@ -158,102 +175,28 @@ h3 {
     font-size: 24px;
     font-weight: 600;
   }
-}
 
-.section__picture--cottage {
-  display: block;
-  position: relative;
-}
-
-.section__img--cottage {
-  transition: transform 0.3s;
-  display: block;
-}
-
-.section__info--cottage {
-  text-align: center;
-  margin: 0.5rem 0 1rem 0;
-  font-size: typography.$small;
-  position: absolute;
-  width: 60%;
-  top: typography.$spacer;
-  left: 0;
-  margin: 0;
-  transition: transform 0.3s;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: colors.$light;
-  padding: 0.5rem 0;
-}
-
-.section__info--gerta {
-  margin-left: 40%;
+  &__info {
+    &--cottage {
+      text-align: center;
+      margin: 0.5rem 0 1rem 0;
+      font-size: typography.$small;
+      position: absolute;
+      width: 60%;
+      top: typography.$spacer;
+      left: 0;
+      margin: 0;
+      transition: transform 0.3s;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: colors.$light;
+      padding: 0.5rem 0;
+    }
+    &--gerta {
+      margin-left: 40%;
+    }
+  }
 }
 
 .figcaption-display {
   display: block;
 }
-
-.section__picture--cottage:hover .section__img--cottage {
-  transform: scale(1.1);
-}
-
-.section__picture--cottage:hover .section__info--cottage {
-  transform: scale(1.1);
-}
-
-.important-banner-text {
-  background-color: colors.$primaryVariant;
-  border-top: 1px solid colors.$primary;
-  border-bottom: 1px solid colors.$primary;
-  font-size: 24px;
-  font-weight: 600;
-  color: colors.$secondary;
-  text-align: center;
-  padding: 1em 0;
-}
-
-.text-right {
-  text-align: end;
-}
-
-.scroll-top {
-  position: fixed;
-  right: typography.$spacer;
-  bottom: typography.$spacer;
-  width: 3rem;
-  height: 3rem;
-  padding: 0.5rem;
-  background-color: colors.$primary;
-  border: 2px solid colors.$primaryDark;
-  box-shadow: 3px 3px 5px colors.$secondary;
-
-  &__icon {
-    fill: colors.$light;
-    width: 2rem;
-    height: 2rem;
-    transform: rotate(180deg);
-  }
-  &:hover {
-    background: linear-gradient(45deg, colors.$primaryDark, colors.$primary);
-  }
-
-  &:active {
-    box-shadow: 1px 1px 3px colors.$secondary;
-    transform: translate(2px, 2px);
-  }
-}
-/*
-.logo--small {
-  position: fixed;
-  height: 50px;
-  width: auto;
-  top: 0;
-  left: 0;
-  padding: 5px;
-}
-.menu__down--up {
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-*/
