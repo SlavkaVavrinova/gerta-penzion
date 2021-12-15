@@ -1,5 +1,6 @@
 @use '../base/colors';
 @use '../base/typography';
+@use '../base/mixins';
 
 .footer {
   font-size: 14px;
@@ -11,31 +12,59 @@
     border: 1px solid colors.$primary;
     text-align: center;
 
-    @media screen and (min-width: 370px) {
+    @include mixins.special(370px) {
       text-align: left;
       display: grid;
       grid-template-columns: 100px 1fr;
       gap: typography.$spacer/2;
+    }
+
+    @include mixins.tablet {
+      grid-template-columns: 1fr 120px 300px 1fr;
+      gap: typography.$spacer;
+    }
+
+    @include mixins.special(1000px) {
+      grid-template-columns: 1fr 80px 420px 1fr;
+      padding: typography.$spacer * 2;
     }
   }
 
   &__logo {
     display: none;
 
-    @media screen and (min-width: 370px) {
+    @include mixins.special(370px) {
       width: 100%;
       display: block;
       padding-left: typography.$spacer/2;
-      margin-top: typography.$spacer;
+      margin-top: 50px;
+    }
+
+    @include mixins.tablet {
+      grid-column: 2 / 3;
+    }
+
+    @include mixins.special(1000px) {
+      margin-top: typography.$spacer/2;
     }
   }
 
   &__title {
     margin-top: typography.$spacer;
+    @include mixins.special(1000px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__text {
     background-color: colors.$primaryVariant;
+
+    @include mixins.special(1000px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: typography.$spacer;
+    }
   }
 
   &__address {
@@ -46,6 +75,10 @@
   &__contact {
     list-style-type: none;
     padding: 0;
+
+    @include mixins.special(1000px) {
+      margin-top: 0;
+    }
   }
 
   &__copyright {

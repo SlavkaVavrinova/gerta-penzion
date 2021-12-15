@@ -1,19 +1,78 @@
 @use '../base/colors';
 @use '../base/typography';
+@use '../base/mixins';
 
 .header {
   text-align: center;
   padding-top: 80px;
 
+  @include mixins.tablet {
+    position: relative;
+  }
+
+  @include mixins.large {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    backdrop-filter: blur(6px);
+    z-index: 3;
+  }
+
   &__hero {
     position: relative;
     margin-bottom: typography.$spacer/2;
+    @include mixins.tablet {
+      display: grid;
+      grid-template-columns: 6fr 4fr;
+    }
+  }
+
+  &__title {
+    @include mixins.tablet {
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      backdrop-filter: blur(2px);
+      font-size: typography.$titleTablet;
+      background-image: linear-gradient(
+        transparent,
+        transparent,
+        colors.$light,
+        transparent,
+        transparent
+      );
+      margin: 0;
+      padding-right: typography.$spacer/2;
+    }
+    @include mixins.special(900px) {
+      padding-right: 1em;
+    }
+
+    @include mixins.large {
+      font-size: typography.$titleWeb;
+    }
   }
 
   &__img {
     width: 100%;
     height: 100%;
     display: block;
+    position: relative;
+    z-index: 1;
+    @include mixins.tablet {
+      outline: solid 10px rgba(colors.$light, 0.5);
+      outline-offset: -10px;
+    }
   }
 
   &__motto {
@@ -29,8 +88,41 @@
       transparent
     );
     backdrop-filter: blur(6px);
-
+    z-index: 5;
     color: colors.$light;
+
+    @include mixins.tablet {
+      position: relative;
+      margin-top: 100px;
+      background-image: none;
+      backdrop-filter: blur(6px);
+      color: colors.$dark;
+      padding: 1em;
+    }
+
+    @include mixins.special(980px) {
+      font-size: typography.$large;
+    }
+
+    @include mixins.large {
+      margin-top: 200px;
+    }
+
+    &--web {
+      display: none;
+      @include mixins.tablet {
+        display: block;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  &__button {
+    @include mixins.tablet {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 120px);
+      z-index: 5;
+    }
   }
 }
 
@@ -43,4 +135,25 @@
   color: colors.$secondary;
   text-align: center;
   padding: 1em 0;
+  &__link {
+    color: colors.$secondary;
+    text-decoration: none;
+  }
+
+  @include mixins.tablet {
+    grid-column: 1/2;
+    border-right: 1px solid colors.$primary;
+  }
+
+  &__contact {
+    @include mixins.tablet {
+      grid-column: 2/-1;
+      align-self: flex-end;
+      margin-bottom: 0;
+      margin-top: 120px;
+    }
+    @include mixins.large {
+      margin-top: 200px;
+    }
+  }
 }

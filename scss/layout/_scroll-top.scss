@@ -12,6 +12,7 @@
   background-color: colors.$primary;
   border: 2px solid colors.$primaryDark;
   box-shadow: 3px 3px 5px colors.$secondary;
+  z-index: 1000;
 
   &__icon {
     fill: colors.$light;
