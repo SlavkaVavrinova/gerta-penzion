@@ -16,17 +16,6 @@
     margin-right: auto;
   }
 
-  &::after {
-    content: ' ';
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    backdrop-filter: blur(6px);
-    z-index: 3;
-  }
-
   &__hero {
     position: relative;
     margin-bottom: typography.$spacer/2;
@@ -43,14 +32,6 @@
       top: 0;
       right: 0;
       backdrop-filter: blur(2px);
-
-      background-image: linear-gradient(
-        transparent,
-        transparent,
-        colors.$light,
-        transparent,
-        transparent
-      );
       margin: 0;
       padding-right: typography.$spacer/2;
     }
@@ -66,8 +47,8 @@
     position: relative;
     z-index: 1;
     @include mixins.tablet {
-      outline: solid 10px rgba(colors.$light, 0.5);
-      outline-offset: -10px;
+      outline: solid 20px rgba(colors.$light, 0.5);
+      outline-offset: -20px;
     }
   }
 
