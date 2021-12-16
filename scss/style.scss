@@ -251,6 +251,11 @@ h3 {
       margin-right: typography.$spacer;
     }
   }
+  &__one-row {
+    @include mixins.special(900px) {
+      grid-column: 2/-1;
+    }
+  }
 
   &__picture {
     &--cottage {
@@ -327,5 +332,15 @@ h3 {
   @include mixins.special(900px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.social-networks__link {
+  color: colors.$primary;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: typography.$small;
+  @include mixins.tablet {
+    font-size: typography.$normal;
   }
 }

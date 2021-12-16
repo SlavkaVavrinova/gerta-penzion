@@ -25,7 +25,7 @@
     }
 
     @include mixins.special(1000px) {
-      grid-template-columns: 1fr 80px 420px 1fr;
+      grid-template-columns: 1fr 80px 600px 1fr;
       padding: typography.$spacer * 2;
     }
   }
@@ -91,12 +91,18 @@
   }
 
   &__link--contact {
-    color: colors.$dark;
+    color: colors.$secondary;
+    font-weight: 600;
     text-decoration: none;
   }
 
   &__link {
     color: colors.$light;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: colors.$primary;
+    }
   }
 
   &__heart {

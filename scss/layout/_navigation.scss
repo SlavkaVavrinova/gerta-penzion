@@ -25,26 +25,41 @@
     background-color: colors.$secondary;
     border-radius: 0 0 10px 10px;
     box-shadow: 0px 2px 4px colors.$primary;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: colors.$primary;
+    }
   }
 
   &__item {
     list-style-type: none;
     display: flex;
     align-items: center;
-    padding: 0 0.5rem 0 0;
+    text-align: center;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: colors.$primary;
+    }
 
     &--language {
       font-size: 16px;
       padding: 0;
+      color: colors.$secondary;
+      background-color: colors.$light;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: colors.$primaryVariant;
+      }
     }
 
     &--map {
       border-radius: 0 0 0 10px;
-      padding-left: 0.5rem;
-    }
-
-    &--contact {
-      padding-right: 1rem;
     }
 
     &--menu {
@@ -59,6 +74,13 @@
   &__link {
     color: colors.$light;
     text-decoration: none;
+    display: block;
+    padding: 0 0.5rem 0 0;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: colors.$primary;
+    }
   }
 
   &__up {
@@ -83,20 +105,20 @@
   }
 }
 
-.menu__up .menu__item {
-  background-color: colors.$light;
-  margin: 0 0 0 -1px;
-
-  @media screen and (min-width: 350px) {
-    padding-right: 1rem;
-  }
+.menu__up {
+  background-color: colors.$secondary;
 }
 
-.menu__link--map,
-.menu__link--call {
-  color: colors.$secondary;
-  display: flex;
-  align-items: center;
+.menu__link {
+  &--home,
+  &--gallery,
+  &--about,
+  &--trips,
+  &--covid,
+  &--booking {
+    width: 85vw;
+    padding: 0;
+  }
 }
 
 .menu__hide {
@@ -126,11 +148,22 @@
   right: 1rem;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: colors.$primary;
+  }
 }
 
 .menu__item--home {
   margin-bottom: 8vh;
   margin-top: 8vh;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: colors.$primary;
+  }
 }
 
 .rooms-menu-opened {
@@ -170,6 +203,7 @@
   color: colors.$secondary;
   text-decoration: none;
   font-size: typography.$large;
+  z-index: 10000;
 }
 
 .language-select--display {
@@ -184,6 +218,11 @@
   top: 0;
   right: 0;
   z-index: 10000;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: colors.$primary;
+  }
 }
 
 @include mixins.tablet {
@@ -212,9 +251,18 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1000;
+
     color: colors.$light;
     line-height: 50px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: colors.$primaryVariant;
+    }
+    @include mixins.special(900px) {
+      padding-left: 1rem;
+    }
   }
 
   .icon-open-svg {
@@ -231,6 +279,7 @@
     margin: 0 calc(100vw / 8 * 2) 0 calc(100vw / 8 * 2);
     padding: 0;
     align-items: center;
+    line-height: 50px;
   }
 
   .menu__link {
@@ -243,11 +292,17 @@
     padding: 0;
   }
   .menu__item--covid {
-    position: absolute;
+    position: fixed;
     top: 70px;
-    right: 20px;
+    right: 0;
+    background-color: colors.$primary;
     color: colors.$secondary;
-    z-index: 1000;
+    font-size: typography.$small;
+    width: 75px;
+    height: 50px;
+    border-radius: 10px 0 0 10px;
+    line-height: 20px;
+    z-index: 10000;
   }
 
   .menu__item--booking {
@@ -315,5 +370,66 @@
     position: static;
     grid-column: 6/7;
     color: colors.$light;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$secondary;
+
+    font-size: typography.$normal;
+
+    border-radius: 0;
+    line-height: 50px;
   }
+}
+
+.menu__link--map,
+.menu__link--call,
+.menu__link--language {
+  color: colors.$secondary;
+  background-color: colors.$light;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: colors.$primaryVariant;
+  }
+}
+
+.menu__item--language {
+  @include mixins.special(350px) {
+    padding-right: 1rem;
+  }
+
+  @include mixins.tablet {
+    color: colors.$light;
+    background-color: colors.$secondary;
+    z-index: 10000;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: colors.$primary;
+    }
+  }
+
+  @include mixins.large {
+    padding-left: 1rem;
+  }
+}
+.menu__link--map {
+  border-radius: 0 0 0 10px;
+  padding-left: 0.5rem;
+  @include mixins.special(350px) {
+    padding: 0 1rem;
+  }
+}
+.menu__link--call {
+  @include mixins.special(350px) {
+    padding-right: 1rem;
+  }
+}
+
+.my-active-class {
+  background-color: red;
 }
