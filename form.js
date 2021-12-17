@@ -1,7 +1,8 @@
 'use strict';
 
-const dateCheckboxElm = document.querySelector('#checkbox--date');
-const dateTextElm = document.querySelector('#checkbox__text--date');
+/*checkbox datum*/
+const dateCheckboxElm = document.querySelector('#date__checkbox');
+const dateTextElm = document.querySelector('#date__specification');
 
 dateCheckboxElm.addEventListener('change', () => {
   if (dateCheckboxElm.checked) {
@@ -11,6 +12,7 @@ dateCheckboxElm.addEventListener('change', () => {
   }
 });
 
+/*select u pokojů*/
 const roomElm = document.querySelector('#room');
 const roomTextElm = document.querySelector('#room__info');
 
@@ -22,6 +24,7 @@ roomElm.addEventListener('change', (event) => {
   }
 });
 
+/*validace emailu*/
 const emailElm = document.querySelector('#email');
 const emailErrorElm = document.querySelector('#email__error-message');
 
@@ -34,6 +37,7 @@ emailElm.addEventListener('change', (event) => {
   }
 });
 
+/*odeslání formuláře*/
 const formElm = document.querySelector('#reservationForm');
 
 if (formElm) {

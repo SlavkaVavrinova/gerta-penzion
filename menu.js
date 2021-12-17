@@ -1,5 +1,6 @@
 'use strict';
 
+/*hamburger*/
 const menuOpenElm = document.querySelector('#menu__button');
 const menu = document.querySelector('#menu__open');
 const cross = document.querySelector('#cross');
@@ -19,6 +20,7 @@ cross.addEventListener('click', () => {
   roomsElm.classList.remove('rooms-menu-opened');
 });
 
+/*jazyky rozbalení*/
 const languageElm = document.querySelector('#language');
 const languageSelectElm = document.querySelector('#language__select');
 
@@ -30,6 +32,7 @@ languageSelectElm.addEventListener('click', () => {
   languageSelectElm.classList.remove('language-select--display');
 });
 
+/*posun stránky nahoru + z toho zakomentovaného vytvořím animaci na zmenšení loga a skrytí horní řádky. Naruší to ale celou navigaci*/
 const scrollTopElm = document.querySelector('.scroll-top');
 const logoElm = document.querySelector('#logo');
 const menuDownElm = document.querySelector('.menu__down');

@@ -1,5 +1,7 @@
 'use strict';
 
+/*rozbalovací button v galerii u každého pokoje*/
+
 const buttonFotoElmDouble = document.querySelector('.foto__button--double');
 const fotoElmDouble = document.querySelector('.foto__hidden--double');
 

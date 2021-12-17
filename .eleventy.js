@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
   // Zkopírovat css/ to _site/css/
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('*.js');
-  eleventyConfig.addPassthroughCopy('/*.php');
+  eleventyConfig.addPassthroughCopy('rezervace.php');
   eleventyConfig.addPassthroughCopy('Class');
 
   return {

@@ -125,13 +125,13 @@ title: Rezervace * Penzion Gerta Český Krumlov
             class="date__checkbox--input"
             type="checkbox"
             name="date__checkbox"
-            id="checkbox--date"
+            id="date__checkbox"
           />
           <label class="date__checkbox--label" for="date__checkbox">
             Neznám přesný termín
           </label>
 
-          <div class="date__checkbox--hidden" id="checkbox__text--date">
+          <div class="date__checkbox--hidden" id="date__specification">
             <label
               class="form__label form__label--checkbox date__text--hidden"
               for="date__text"
@@ -141,6 +141,7 @@ title: Rezervace * Penzion Gerta Český Krumlov
               class="form__input date__input--hidden"
               type="date__text"
               name="date__text"
+              id="date__text"
             />
           </div>
         </fieldset>
@@ -156,14 +157,16 @@ title: Rezervace * Penzion Gerta Český Krumlov
             <option value="mensi">Menší</option>
           </select>
         </div>
+
         <div class="form__field">
           <div class="room__info--display" id="room__info">
             <label class="form__label" for="person">
               Zadej počet osob/upřesnění
             </label>
-            <input class="form__input" type="text" name="person" />
+            <input class="form__input" type="text" name="person" id="person" />
           </div>
         </div>
+
         <div class="form__field">
           <label class="form__label" for="message"
             >Chcete něco dalšího sdělit
