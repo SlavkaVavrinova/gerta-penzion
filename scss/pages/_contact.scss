@@ -1,5 +1,6 @@
 @use '../base/colors';
 @use '../base/typography';
+@use '../base/mixins';
 
 .contact {
   &__list {
@@ -12,6 +13,12 @@
     margin-bottom: 1em;
     color: colors.$dark;
     text-decoration: none;
+    @include mixins.special(900px) {
+      font-size: typography.$xLarge;
+    }
+    @include mixins.large {
+      font-size: typography.$xxLarge;
+    }
   }
 
   &__icon {

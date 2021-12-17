@@ -5,6 +5,7 @@
 @use 'layout/navigation';
 @use 'layout/footer';
 @use 'layout/header';
+@use 'layout/section';
 @use 'layout/scroll-top';
 
 @use 'components/buttons.scss';
@@ -116,7 +117,21 @@ h3 {
   }
 
   &__list {
-    list-style-type: none;
+    @include mixins.tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: typography.$spacer/2 5vw;
+      padding: 0;
+      list-style-type: none;
+      margin-left: 10vw;
+      margin-right: 5vw;
+    }
+
+    @include mixins.large {
+      grid-template-columns: repeat(4, 1fr);
+      margin: typography.$spacer 0 typography.$spacerL 0;
+      gap: typography.$spacer/2;
+    }
   }
 
   &__item {
@@ -133,205 +148,15 @@ h3 {
     padding: 0.5em;
     margin-right: 1em;
   }
-
-  &__list {
-    @include mixins.tablet {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: typography.$spacer/2;
-      padding: 0;
-    }
-
-    @include mixins.large {
-      grid-template-columns: repeat(4, 1fr);
-      margin: typography.$spacer 0 typography.$spacerL 0;
-    }
-  }
-}
-
-.section {
-  margin-top: typography.$spacer;
-
-  @include mixins.special(900px) {
-    display: grid;
-    grid-template-columns: 1fr 7fr 6fr;
-    margin: typography.$spacerXL 0;
-  }
-
-  @include mixins.large {
-    margin: typography.$spacerXXL 0;
-  }
-
-  &__h2 {
-    margin-left: 40vw;
-    position: relative;
-    padding-left: 1em;
-
-    @include mixins.special(900px) {
-      writing-mode: vertical-lr;
-      margin-left: 0;
-      margin-top: 0;
-      padding-top: 2em;
-      text-align: end;
-      transform: rotate(180deg);
-      padding-left: 0;
-      background: colors.$light;
-    }
-
-    @include mixins.large {
-      gap: typography.$spacer;
-    }
-
-    &--small {
-      margin-left: 10vw;
-      position: relative;
-      padding-left: 1rem;
-
-      @include mixins.special(900px) {
-        writing-mode: vertical-lr;
-        margin-left: 0;
-        margin-top: 0;
-        padding-top: 2em;
-        text-align: left;
-        transform: rotate(180deg);
-        padding-left: 0;
-        background: colors.$light;
-        font-size: typography.$large;
-      }
-
-      @include mixins.large {
-        gap: typography.$spacer;
-      }
-    }
-  }
-
-  &__h2::before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: -40vw;
-    width: 40vw;
-    height: 1em;
-    border-bottom: 1px solid colors.$secondary;
-
-    @include mixins.special(900px) {
-      left: 0;
-      width: 100%;
-      height: 30%;
-      border-bottom: 0;
-      border-left: 1px solid colors.$secondary;
-      margin-left: 0.7em;
-      z-index: -10;
-    }
-  }
-
-  &__h2--small::before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: -10vw;
-    width: 10vw;
-    height: 1em;
-    border-bottom: 1px solid colors.$secondary;
-
-    @include mixins.special(900px) {
-      left: 0;
-      width: 100%;
-      height: 50px;
-      border-bottom: 0;
-      border-left: 1px solid colors.$secondary;
-      margin-left: 0.7em;
-
-      z-index: -10;
-    }
-  }
-  &__left {
-    @include mixins.special(900px) {
-      align-self: center;
-      margin-right: typography.$spacer;
-    }
-  }
-  &__one-row {
-    @include mixins.special(900px) {
-      grid-column: 2/-1;
-    }
-  }
-
-  &__picture {
-    &--cottage {
-      display: block;
-      position: relative;
-
-      &:hover .section__img--cottage {
-        transform: scale(1.1);
-      }
-
-      &:hover .section__info--cottage {
-        transform: scale(1.1);
-      }
-    }
-  }
-  &__img {
-    width: 60%;
-
-    &--booking {
-      width: 100%;
-    }
-
-    &--cottage {
-      transition: transform 0.3s;
-      display: block;
-    }
-  }
-
-  &__img--right {
-    margin-left: 40%;
-    margin-top: -48px;
-    box-shadow: -16px -16px 0 colors.$primary;
-  }
-
-  &__motto {
-    font-size: 24px;
-    font-weight: 600;
-    @include mixins.special(900px) {
-      margin-top: 0;
-    }
-  }
-
-  &__info {
-    &--cottage {
-      text-align: center;
-      margin: 0.5rem 0 1rem 0;
-      font-size: typography.$small;
-      position: absolute;
-      width: 60%;
-      top: typography.$spacer;
-      left: 0;
-      margin: 0;
-      transition: transform 0.3s;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: colors.$light;
-      padding: 0.5rem 0;
-    }
-    &--gerta {
-      margin-left: 40%;
-    }
-  }
-  &__center {
-    @include mixins.special(900px) {
-      grid-column: 2/-1;
-    }
-  }
 }
 
 .figcaption-display {
   display: block;
 }
 
-.grid-two-column {
+.grid__two-column {
   @include mixins.special(900px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
   }
 }
 

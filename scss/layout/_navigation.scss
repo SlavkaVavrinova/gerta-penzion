@@ -449,6 +449,13 @@
       @include mixins.tablet {
         width: calc((100vw / 8) + 1rem);
       }
+      @include mixins.large {
+        width: calc(1200px / 9);
+        &:hover,
+        &:focus {
+          width: calc(1200px / 9);
+        }
+      }
     }
 
     &--active {
