@@ -1,7 +1,7 @@
 <nav>
   <div class="menu">
     <ul class="menu__up" id="menu__up">
-      <li class="menu__item menu__item--map">
+      <li class="menu__item menu__item--map ">
         <a class="menu__link menu__link--map" href="https://goo.gl/maps/ZgsGDbw5X8nvqnFf7" target="_blanc">
           navigovat<img src="/images/map.svg" alt="Ikona navigovat"/></a>
       </li>
@@ -11,7 +11,7 @@
       </li>
       <li class="menu__item menu__item--language" id="language">
         CZ<svg
-          class="icon-open-svg"
+          class="menu__icon-open-svg"
           xmlns="http://www.w3.org/2000/svg"
           height="24px"
           viewbox="0 0 24 24"
@@ -35,16 +35,17 @@
     </ul>
     <ul class="menu__down">
       <li class="menu__item menu__item--rooms" id="rooms">
-        <a class="menu__link" href="/pokoje">
+        <a class="menu__link menu__link--rooms  {{ 'menu__link--active' if page.fileSlug === 'pokoje' }} " href="/pokoje">
           pokoje</a>
       </li>
-      <li class="menu__item menu__item--logo">
-        <a class="menu__link" href="/">
+      <li class="menu__item menu__item--logo ">
+        <a class="menu__link menu__link--logo {{ 'menu__link--active' if page.fileSlug === '' }}" href="/">
           <img id="logo" class="menu__logo" src="/images/logo.svg" alt="Logo penzion Gerta Český Krumlov"/>
         </a>
       </li>
-      <li class="menu__item menu__item--contact" id="contact">
-        <a class="menu__link" href="/kontakt">kontakt</a>
+      <li class="menu__item menu__item--contact " id="contact">
+        <a class="menu__link menu__link--contact {{'menu__link--active' if page.fileSlug === 'kontakt'}}" href="/kontakt">
+          kontakt</a>
       </li>
       <li class="menu__item menu__item--menu" id="menu__button">
         menu <img src="/images/menu.svg" alt="Ikona menu"/>
@@ -53,23 +54,25 @@
     <ul class="menu__hide" id="menu__open">
       <img class="menu__cross" id="cross" src="/images/cross.svg" alt="Ikona křížek"/>
       <li class="menu__item menu__item--home">
-        <a class="menu__link menu__link--home" href="/">domů</a>
+        <a class="menu__link menu__link--home {{'menu__link--active' if page.fileSlug === 'index'}}" href="/">domů</a>
       </li>
       <li class="menu__item menu__item--gallery">
-        <a class="menu__link menu__link--gallery" href="/galerie">galerie</a>
+        <a class="menu__link menu__link--gallery {{ 'menu__link--active' if page.fileSlug === 'galerie' }} " href="/galerie">
+          galerie</a>
       </li>
       <li class="menu__item">
-        <a class="menu__link menu__link--about" href="/onas">o nás</a>
+        <a class="menu__link menu__link--about {{'menu__link--active' if page.fileSlug === 'onas'}}" href="/onas">o nás</a>
       </li>
       <li class="menu__item menu__item--trips">
-        <a class="menu__link menu__link--trips" href="/vylety">výlety</a>
+        <a class="menu__link menu__link--trips {{'menu__link--active' if page.fileSlug === 'vylety'}}" href="/vylety">výlety</a>
       </li>
-      <li class="menu__item menu__item--covid">
-        <a class="menu__link  menu__link--covid" href="/covid">
+      <li class="menu__item menu__item--covid ">
+        <a class="menu__link  menu__link--covid {{'menu__link--active' if page.fileSlug === 'covid'}}" href="/covid">
           covid-19 info</a>
       </li>
       <li class="menu__item menu__item--booking">
-        <a class="menu__link menu__link--booking" href="/rezervace">rezervace</a>
+        <a class="menu__link menu__link--booking {{'menu__link--active' if page.fileSlug === 'rezervace'}}" href="/rezervace">
+          rezervace</a>
       </li>
     </ul>
   </div>

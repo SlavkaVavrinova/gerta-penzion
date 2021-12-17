@@ -15,6 +15,56 @@
   box-shadow: 2px 2px 4px colors.$primary;
   background-color: colors.$secondary;
 
+  @include mixins.tablet {
+    font-weight: 600;
+  }
+
+  &__hide {
+    display: none;
+
+    @include mixins.tablet {
+      position: fixed;
+      top: 0;
+      display: grid;
+      grid-template-columns: repeat(4, calc(100vw / 8));
+      grid-template-rows: 50px;
+      background-color: colors.$secondary;
+      width: 100%;
+      margin: 0 calc(100vw / 8 * 2) 0 calc(100vw / 8 * 2);
+      padding: 0;
+      align-items: center;
+      line-height: 50px;
+    }
+
+    @include mixins.large {
+      left: 0;
+      width: 1200px;
+      margin-left: calc((100vw - 1200px) / 2);
+      margin-right: calc((100vw - 1200px) / 2);
+      position: absolute;
+      top: 0;
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+    }
+  }
+
+  &__cross {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      background-color: colors.$primary;
+    }
+
+    @include mixins.tablet {
+      display: none;
+    }
+  }
+
   &__logo {
     position: absolute;
     top: 0;
@@ -26,60 +76,13 @@
     border-radius: 0 0 10px 10px;
     box-shadow: 0px 2px 4px colors.$primary;
     &:hover,
-    &:focus,
-    &:active {
-      background-color: colors.$primary;
-    }
-  }
-
-  &__item {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    cursor: pointer;
-
-    &:hover,
-    &:focus,
-    &:active {
+    &:focus {
       background-color: colors.$primary;
     }
 
-    &--language {
-      font-size: 16px;
-      padding: 0;
-      color: colors.$secondary;
-      background-color: colors.$light;
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: colors.$primaryVariant;
-      }
-    }
-
-    &--map {
-      border-radius: 0 0 0 10px;
-    }
-
-    &--menu {
-      padding-right: 0;
-
-      @include mixins.special(350px) {
-        padding-right: 1rem;
-      }
-    }
-  }
-
-  &__link {
-    color: colors.$light;
-    text-decoration: none;
-    display: block;
-    padding: 0 0.5rem 0 0;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: colors.$primary;
+    @include mixins.large {
+      left: calc((100vw - 60px) / 2);
+      z-index: 1000;
     }
   }
 
@@ -92,6 +95,10 @@
     margin: 0;
     padding: 0;
     font-size: 12px;
+
+    @include mixins.tablet {
+      height: 0;
+    }
   }
 
   &__down {
@@ -102,30 +109,355 @@
     color: colors.$light;
     margin: 0;
     padding: 0;
+
+    @include mixins.tablet {
+      height: 50px;
+      background-color: colors.$secondary;
+    }
+  }
+
+  &__icon-open-svg {
+    fill: colors.$secondary;
+    @include mixins.tablet {
+      fill: colors.$light;
+      &:hover,
+      &:focus {
+        fill: colors.$secondary;
+      }
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+
+    @include mixins.tablet {
+      padding: 0;
+    }
+
+    &--map {
+      border-radius: 0 0 0 10px;
+
+      @include mixins.tablet {
+        display: none;
+      }
+    }
+
+    &--call {
+      @include mixins.tablet {
+        display: none;
+      }
+    }
+
+    &--language {
+      font-size: 16px;
+      padding: 0;
+      color: colors.$secondary;
+      background-color: colors.$light;
+      &:hover,
+      &:focus {
+        background-color: colors.$primaryVariant;
+      }
+
+      @include mixins.special(350px) {
+        padding-right: 1rem;
+      }
+
+      @include mixins.tablet {
+        padding-right: 0;
+        position: absolute;
+        top: 0;
+        right: typography.$spacer/2;
+        background-color: colors.$secondary;
+        color: colors.$light;
+        line-height: 50px;
+        z-index: 1000;
+        &:hover,
+        &:focus {
+          background-color: colors.$light;
+          color: colors.$secondary;
+        }
+      }
+
+      @include mixins.special(900px) {
+        padding-left: 1rem;
+      }
+
+      @include mixins.large {
+        right: calc((100vw - 1200px) / 2);
+        padding-right: typography.$spacer/2;
+      }
+    }
+
+    &--rooms {
+      border-radius: 10px 0 0 0;
+
+      @include mixins.tablet {
+        border-radius: 0;
+        position: absolute;
+        top: 0;
+        left: calc(100vw / 8);
+        z-index: 1000;
+        background-color: colors.$secondary;
+        line-height: 50px;
+        width: calc(100vw / 8);
+      }
+
+      @include mixins.large {
+        left: calc((100vw - 1200px) / 2);
+        width: calc(1200px / 9);
+      }
+    }
+
+    &--contact {
+      @include mixins.tablet {
+        position: absolute;
+        top: 0;
+        right: 75px;
+        z-index: 1000;
+        line-height: 50px;
+        width: calc(100vw / 8);
+
+        @include mixins.special(880) {
+          right: calc(100vw / 8);
+        }
+      }
+
+      @include mixins.large {
+        right: calc((100vw - 1200px) / 2);
+        margin-right: calc(1200px / 9);
+        width: calc(1200px / 9);
+      }
+    }
+
+    &--menu {
+      padding: 0 0.2rem;
+      &:hover,
+      &:focus {
+        background-color: colors.$primaryDark;
+      }
+
+      @include mixins.special(370px) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+
+      @include mixins.tablet {
+        display: none;
+      }
+    }
+
+    &--home {
+      margin-bottom: 8vh;
+      margin-top: 8vh;
+      &:hover,
+      &:focus {
+        background-color: colors.$primary;
+      }
+
+      @include mixins.tablet {
+        display: none;
+      }
+    }
+
+    &--booking {
+      margin-top: 8vh;
+
+      @include mixins.tablet {
+        margin-top: 0;
+      }
+    }
+
+    &--covid {
+      @include mixins.tablet {
+        position: fixed;
+        top: 55px;
+        right: 0;
+        background-color: colors.$primaryDark;
+        font-size: typography.$small;
+        width: 75px;
+        height: 50px;
+        border-radius: 10px 0 0 10px;
+        line-height: 20px;
+        z-index: 10000;
+        &:hover,
+        &:focus {
+          background-color: colors.$light;
+          color: colors.$secondary;
+          border: 3px solid colors.$secondary;
+          border-radius: 8px 0 0 8px;
+          line-height: 20px;
+        }
+      }
+
+      @include mixins.large {
+        position: static;
+        grid-column: 6/7;
+        color: colors.$light;
+        width: 100%;
+        height: 100%;
+        background-color: colors.$secondary;
+        font-size: typography.$normal;
+        border-radius: 0;
+        line-height: 50px;
+        &:hover,
+        &:focus {
+          border: 0;
+          border-radius: 0;
+          line-height: 50px;
+        }
+      }
+    }
+
+    &--gallery {
+      @include mixins.large {
+        grid-column: 2/3;
+      }
+    }
+  }
+
+  &__link {
+    color: colors.$light;
+    text-decoration: none;
+    display: block;
+    &:hover,
+    &:focus {
+      background-color: colors.$primaryDark;
+      color: colors.$light;
+    }
+
+    @include mixins.tablet {
+      text-align: center;
+      &:hover,
+      &:focus {
+        background-color: colors.$light;
+        color: colors.$secondary;
+      }
+    }
+
+    &--logo {
+      padding: 0;
+    }
+
+    &--map {
+      border-radius: 0 0 0 10px;
+      color: colors.$secondary;
+      background-color: colors.$light;
+      display: flex;
+      align-items: center;
+      &:hover,
+      &:focus {
+        background-color: colors.$primaryVariant;
+        color: colors.$secondary;
+      }
+
+      @include mixins.special(350px) {
+        padding: 0 0.5rem 0 1rem;
+      }
+    }
+
+    &--call {
+      color: colors.$secondary;
+      background-color: colors.$light;
+      display: flex;
+      align-items: center;
+      margin: 0 -2;
+      &:hover,
+      &:focus {
+        background-color: colors.$primaryVariant;
+        color: colors.$secondary;
+      }
+
+      @include mixins.special(350px) {
+        padding: 0 1rem 0 0.5rem;
+      }
+    }
+
+    &--language {
+      display: flex;
+      align-items: center;
+    }
+
+    &--rooms {
+      padding-right: 0.3rem;
+
+      @include mixins.special(370px) {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        &:hover,
+        &:focus {
+          border-radius: 10px 0 0 0;
+        }
+      }
+
+      @include mixins.tablet {
+        width: calc(100vw / 8);
+        &:hover,
+        &:focus {
+          border-radius: 0;
+        }
+      }
+
+      @include mixins.large {
+        width: calc(1200px / 9);
+      }
+    }
+
+    &--contact {
+      padding-right: 0.3rem;
+
+      @include mixins.special(370px) {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
+
+      @include mixins.tablet {
+        width: calc(100vw / 8);
+      }
+
+      @include mixins.large {
+        width: calc(1200px / 9);
+      }
+    }
+
+    &--home,
+    &--about,
+    &--gallery,
+    &--trips,
+    &--covid,
+    &--booking {
+      width: 85vw;
+      padding: 0;
+
+      @include mixins.tablet {
+        width: calc(100vw / 8);
+      }
+
+      @include mixins.large {
+        width: calc(1200px / 9);
+        &:hover,
+        &:focus {
+          width: calc(1200px / 9);
+        }
+      }
+    }
+
+    &--booking {
+      @include mixins.tablet {
+        width: calc((100vw / 8) + 1rem);
+      }
+    }
+
+    &--active {
+      background-color: colors.$primary;
+    }
   }
 }
 
-.menu__up {
-  background-color: colors.$secondary;
-}
-
-.menu__link {
-  &--home,
-  &--gallery,
-  &--about,
-  &--trips,
-  &--covid,
-  &--booking {
-    width: 85vw;
-    padding: 0;
-  }
-}
-
-.menu__hide {
-  display: none;
-}
-
-.menu-opened {
+.menu .menu-opened {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -142,30 +474,6 @@
   font-weight: 500;
 }
 
-.menu__cross {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: colors.$primary;
-  }
-}
-
-.menu__item--home {
-  margin-bottom: 8vh;
-  margin-top: 8vh;
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: colors.$primary;
-  }
-}
-
 .rooms-menu-opened {
   position: absolute;
   top: 16vh;
@@ -174,10 +482,10 @@
   display: block;
   width: 85vw;
   line-height: 8vh;
-}
-
-.menu__item--booking {
-  margin-top: 8vh;
+  &:hover,
+  &:focus {
+    border-radius: 0;
+  }
 }
 
 .contact-menu-opened {
@@ -204,6 +512,12 @@
   text-decoration: none;
   font-size: typography.$large;
   z-index: 10000;
+  display: block;
+  &:hover,
+  &:focus {
+    background-color: colors.$primary;
+    color: colors.$dark;
+  }
 }
 
 .language-select--display {
@@ -218,218 +532,6 @@
   top: 0;
   right: 0;
   z-index: 10000;
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: colors.$primary;
-  }
-}
-
-@include mixins.tablet {
-  .menu__item--map,
-  .menu__item--call,
-  .menu__item--menu,
-  .menu__item--home,
-  .menu__cross {
-    display: none;
-  }
-
-  .menu__up {
-    height: 0;
-  }
-
-  .menu__down {
-    height: 50px;
-    background-color: colors.$secondary;
-  }
-
-  .menu__up .menu__item {
-    background-color: colors.$secondary;
-  }
-
-  .menu__item--language {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    color: colors.$light;
-    line-height: 50px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: colors.$primaryVariant;
-    }
-    @include mixins.special(900px) {
-      padding-left: 1rem;
-    }
-  }
-
-  .icon-open-svg {
-    fill: colors.$light;
-  }
-  .menu__hide {
-    position: fixed;
-    top: 0;
-    display: grid;
-    grid-template-columns: repeat(4, calc(100vw / 8));
-    grid-template-rows: 50px;
-    background-color: colors.$secondary;
-    width: 100%;
-    margin: 0 calc(100vw / 8 * 2) 0 calc(100vw / 8 * 2);
-    padding: 0;
-    align-items: center;
-    line-height: 50px;
-  }
-
-  .menu__link {
-    text-align: center;
-    width: 100%;
-    border: 0;
-  }
-
-  .menu__item {
-    padding: 0;
-  }
-  .menu__item--covid {
-    position: fixed;
-    top: 70px;
-    right: 0;
-    background-color: colors.$primary;
-    color: colors.$secondary;
-    font-size: typography.$small;
-    width: 75px;
-    height: 50px;
-    border-radius: 10px 0 0 10px;
-    line-height: 20px;
-    z-index: 10000;
-  }
-
-  .menu__item--booking {
-    margin-top: 0;
-  }
-
-  .menu__item--contact {
-    position: absolute;
-    top: 0;
-    right: 65px;
-    z-index: 1000;
-    line-height: 50px;
-    width: calc(100vw / 8);
-
-    @include mixins.special(880) {
-      right: calc(100vw / 8);
-    }
-  }
-
-  .menu__item--rooms {
-    position: absolute;
-    top: 0;
-    left: calc(100vw / 8);
-    z-index: 1000;
-    background-color: colors.$secondary;
-    line-height: 50px;
-    width: calc(100vw / 8);
-  }
-}
-
-@include mixins.large {
-  .menu__hide {
-    left: 0;
-    width: 1200px;
-    margin-left: calc((100vw - 1200px) / 2);
-    margin-right: calc((100vw - 1200px) / 2);
-    position: absolute;
-    top: 0;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-  }
-
-  .menu__item--rooms {
-    left: calc((100vw - 1200px) / 2);
-    width: calc(1200px / 9);
-  }
-  .menu__item--gallery {
-    grid-column: 2/3;
-  }
-  .menu__item--language {
-    right: calc((100vw - 1200px) / 2);
-  }
-
-  .menu__logo {
-    left: calc((100vw - 60px) / 2);
-    z-index: 1000;
-  }
-
-  .menu__item--contact {
-    right: calc((100vw - 1200px) / 2);
-    margin-right: calc(1200px / 9);
-    width: calc(1200px / 9);
-  }
-  .menu__item--covid {
-    position: static;
-    grid-column: 6/7;
-    color: colors.$light;
-    width: 100%;
-    height: 100%;
-    background-color: colors.$secondary;
-
-    font-size: typography.$normal;
-
-    border-radius: 0;
-    line-height: 50px;
-  }
-}
-
-.menu__link--map,
-.menu__link--call,
-.menu__link--language {
-  color: colors.$secondary;
-  background-color: colors.$light;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: colors.$primaryVariant;
-  }
-}
-
-.menu__item--language {
-  @include mixins.special(350px) {
-    padding-right: 1rem;
-  }
-
-  @include mixins.tablet {
-    color: colors.$light;
-    background-color: colors.$secondary;
-    z-index: 10000;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: colors.$primary;
-    }
-  }
-
-  @include mixins.large {
-    padding-left: 1rem;
-  }
-}
-.menu__link--map {
-  border-radius: 0 0 0 10px;
-  padding-left: 0.5rem;
-  @include mixins.special(350px) {
-    padding: 0 1rem;
-  }
-}
-.menu__link--call {
-  @include mixins.special(350px) {
-    padding-right: 1rem;
-  }
-}
-
-.my-active-class {
-  background-color: red;
+  border-left: 8px solid colors.$primaryVariant;
+  border-bottom: 8px solid colors.$primaryVariant;
 }

@@ -5,7 +5,7 @@
   text-transform: uppercase;
   background-color: colors.$primary;
   border: 2px solid colors.$primaryDark;
-  color: colors.$light;
+  color: colors.$dark;
   font-weight: 600;
   font-family: typography.$font-default;
   padding: 0.7rem 1.4rem;
@@ -22,7 +22,7 @@
   }
 
   &__link {
-    color: colors.$light;
+    color: colors.$dark;
     text-decoration: none;
     font-weight: 600;
 
