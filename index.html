@@ -105,7 +105,11 @@ title: Penzion Gerta Český Krumlov
   <section class="section">
     <h2 class="section__h2">Pokoje</h2>
     <div class="section__left">
-      <picture class="section__picture--left">
+      <picture class="section__picture--left"
+        ><source
+          srcset="
+            images/rooms/double-kitchen/dvojluzkovy-pokoj-s-kuchynkou.webp
+          " />
         <img
           class="section__img"
           src="images/rooms/double-kitchen/dvojluzkovy-pokoj-s-kuchynkou.jpg"
@@ -143,12 +147,14 @@ title: Penzion Gerta Český Krumlov
   <section class="section">
     <h2 class="section__h2">Galerie</h2>
     <div class="section__left">
-      <picture class="section__picture--left">
+      <picture class="section__picture--left"
+        ><source srcset="images/index/snidanova-mistnost.webp" />
         <img
           class="section__img"
           src="images/index/snidanova-mistnost.jpg"
           alt="Sňídaňová místnost" /></picture
-      ><picture class="section__picture--right">
+      ><picture class="section__picture--right"
+        ><source srcset="images/index/zahrada-a-bazen..webp" />
         <img
           class="section__img section__img--right"
           src="images/index/zahrada-a-bazen.jpg"
@@ -173,10 +179,11 @@ title: Penzion Gerta Český Krumlov
   <section class="section">
     <h2 class="section__h2">Recenze</h2>
     <div class="section__left">
-      <picture class="section__picture--left">
+      <picture class="section__picture--left"
+        ><source srcset="images/index/booking-oceneni.webp" />
         <img
           class="section__img--booking"
-          src="images/index/booking-oceneni.png"
+          src="images/index/booking-oceneni.jpg"
           alt="Booking Traveller Review Awards 2021"
       /></picture>
     </div>
@@ -214,7 +221,8 @@ title: Penzion Gerta Český Krumlov
     <h2 class="section__h2">Chaty</h2>
     <div class="section__left">
       <a href="http://www.chataruzenka.cz/" target="_blank">
-        <picture class="section__picture--left section__picture--cottage">
+        <picture class="section__picture--left section__picture--cottage"
+          ><source srcset="images/index/chata-ruzenka.webp" />
           <img
             class="section__img section__img--cottage"
             src="images/index/chata-ruzenka.jpg"
@@ -232,7 +240,7 @@ title: Penzion Gerta Český Krumlov
             section__picture--cottage
             section__picture--gerta
           "
-        >
+          ><source srcset="images/index/chata-gerta.webp" />
           <img
             class="section__img section__img--right section__img--cottage"
             src="images/index/chata-gerta.JPG"
@@ -279,6 +287,15 @@ title: Penzion Gerta Český Krumlov
     <h2 class="section__h2">Sledujte</h2>
     <div class="section__one-row">
       <p>
+        Facebook
+        <a
+          class="social-networks__link"
+          href="https://www.facebook.com/PensionGertaCeskyKrumlov"
+          target="_blank"
+          >Pension Gerta Český Krumlov</a
+        >
+      </p>
+      <p>
         Instagram
         <a
           class="social-networks__link"
@@ -288,20 +305,11 @@ title: Penzion Gerta Český Krumlov
         >
       </p>
 
-      <p>
-        Facebook
-        <a
-          class="social-networks__link"
-          href="https://www.facebook.com/PensionGertaCeskyKrumlov"
-          target="_blank"
-          >Pension Gerta Český Krumlov</a
-        >
-      </p>
-
       <!-- LightWidget WIDGET -->
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
       <iframe
         src="https://cdn.lightwidget.com/widgets/de63dca85de3550ba9016f3ac55c1ed1.html"
+        title="Instagram feed pensiongerta.ceskykrumlov"
         scrolling="no"
         allowtransparency="true"
         class="lightwidget-widget"
