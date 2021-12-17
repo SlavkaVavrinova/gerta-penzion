@@ -704,7 +704,7 @@
 @media screen and (min-width: 700px) {
   .header__motto {
     position: relative;
-    margin-top: 100px;
+    margin-top: 110px;
     background-image: none;
     -webkit-backdrop-filter: blur(6px);
             backdrop-filter: blur(6px);
@@ -821,6 +821,7 @@
 }
 @media screen and (min-width: 900px) {
   .section__h2--small {
+    margin-left: 0;
     font-size: 24px;
   }
 }
@@ -1157,19 +1158,27 @@
   display: none;
 }
 
-.email__valid {
+.email__valid,
+.input__valid {
   border: 2px solid #326771;
   border-left: 5px solid #326771;
 }
 
-.email__invalid {
+.email__invalid,
+.input__invalid {
   border: 2px solid #bb0a21;
   border-left: 5px solid #bb0a21;
 }
 
+.error-message {
+  color: #bb0a21;
+  text-align: center;
+  font-weight: 600;
+}
+
 .form-message {
-  display: block;
-  color: red;
+  font-size: 24px;
+  color: #bb0a21;
   z-index: 100000;
 }
 
@@ -1209,6 +1218,30 @@
     display: inline-block;
   }
 }
+.contact__address {
+  list-style-type: none;
+  padding: 0;
+}
+.contact__contact {
+  list-style-type: none;
+  padding: 0;
+}
+@media screen and (min-width: 1000px) {
+  .contact__contact {
+    margin-top: 0;
+  }
+}
+.contact__link--contact {
+  color: #66462c;
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact__link {
+  color: #fffdf7;
+}
+.contact__link:hover, .contact__link:focus, .contact__link:active {
+  background-color: #b09c59;
+}
 
 .map-box--mobile {
   width: 100%;
@@ -1228,64 +1261,12 @@
   }
 }
 
-.room {
-  margin-top: 24px;
-}
 @media screen and (min-width: 900px) {
-  .room {
-    display: grid;
-    grid-template-columns: 1fr 7fr 6fr;
-    margin: 64px 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .room {
-    margin: 96px 0;
-  }
-}
-.room__h2 {
-  margin-left: 10vw;
-  position: relative;
-  padding-left: 1em;
-}
-@media screen and (min-width: 900px) {
-  .room__h2 {
-    -ms-writing-mode: tb-lr;
-        writing-mode: vertical-lr;
-    margin-left: 0;
+  .no-margin-top {
     margin-top: 0;
-    padding-top: 2em;
-    text-align: end;
-    transform: rotate(180deg);
-    padding-left: 0;
-    background: #fffdf7;
   }
 }
-@media screen and (min-width: 1200px) {
-  .room__h2 {
-    gap: 24px;
-  }
-}
-.room__h2::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: -10vw;
-  width: 10vw;
-  height: 1em;
-  border-bottom: 1px solid #66462c;
-}
-@media screen and (min-width: 900px) {
-  .room__h2::before {
-    left: 0;
-    width: 100%;
-    height: 30%;
-    border-bottom: 0;
-    border-left: 1px solid #66462c;
-    margin-left: 0.7em;
-    z-index: -10;
-  }
-}
+
 .room__img {
   width: calc(100% - 16px);
   margin-left: 16px;
@@ -1301,65 +1282,6 @@
   }
 }
 
-.section-room {
-  margin-top: 48px;
-}
-@media screen and (min-width: 900px) {
-  .section-room {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
-    margin: 64px 0;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section-room {
-    margin: 96px 0;
-  }
-}
-.section-room__h2 {
-  margin-left: 10vw;
-  position: relative;
-  padding-left: 1em;
-}
-@media screen and (min-width: 900px) {
-  .section-room__h2 {
-    -ms-writing-mode: tb-lr;
-        writing-mode: vertical-lr;
-    margin-left: 0;
-    margin-top: 0;
-    padding-top: 2em;
-    text-align: end;
-    transform: rotate(180deg);
-    padding-left: 0;
-    background: #fffdf7;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section-room__h2 {
-    gap: 24px;
-  }
-}
-.section-room__h2::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: -10vw;
-  width: 10vw;
-  height: 1em;
-  border-bottom: 1px solid #66462c;
-}
-@media screen and (min-width: 900px) {
-  .section-room__h2::before {
-    left: 0;
-    width: 100%;
-    height: 30%;
-    border-bottom: 0;
-    border-left: 1px solid #66462c;
-    margin-left: 0.7em;
-    z-index: -10;
-  }
-}
 .section-room__img {
   max-width: 100%;
 }
@@ -1618,6 +1540,10 @@ h3 {
   font-size: 75%;
 }
 
+.small {
+  font-size: 75%;
+}
+
 .mobile-hidden {
   display: none;
 }
@@ -1709,4 +1635,9 @@ h3 {
   .social-networks__link {
     font-size: 16px;
   }
+}
+.social-networks__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: -0.25rem;
 }/*# sourceMappingURL=style.css.map */

@@ -37,6 +37,35 @@
       }
     }
   }
+
+  &__address {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__contact {
+    list-style-type: none;
+    padding: 0;
+
+    @include mixins.special(1000px) {
+      margin-top: 0;
+    }
+  }
+
+  &__link--contact {
+    color: colors.$secondary;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__link {
+    color: colors.$light;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: colors.$primary;
+    }
+  }
 }
 
 .map-box {
@@ -53,5 +82,11 @@
       display: inline-block;
       width: 100%;
     }
+  }
+}
+
+.no-margin-top {
+  @include mixins.special(900px) {
+    margin-top: 0;
   }
 }

@@ -26,14 +26,30 @@ roomElm.addEventListener('change', (event) => {
 
 /*validace emailu*/
 const emailElm = document.querySelector('#email');
-const emailErrorElm = document.querySelector('#email__error-message');
+const emailErrorElm = document.querySelector('#error-message');
 
 emailElm.addEventListener('change', (event) => {
   if (validator.isEmail(event.target.value)) {
     emailElm.classList.add('email__valid');
+    emailElm.classList.remove('email__invalid');
+    emailErrorElm.textContent = '';
   } else {
     emailElm.classList.add('email__invalid');
     emailErrorElm.textContent = 'Neplatný email';
+  }
+});
+
+/*validace jména*/
+const nameElm = document.querySelector('#name');
+
+nameElm.addEventListener('change', () => {
+  if (nameElm.value.length > 3) {
+    nameElm.classList.add('input__valid');
+    nameElm.classList.remove('input__invalid');
+    emailErrorElm.textContent = '';
+  } else {
+    nameElm.classList.add('input__invalid');
+    emailErrorElm.textContent = 'Zadané jméno je krátké, neplatné';
   }
 });
 

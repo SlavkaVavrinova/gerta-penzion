@@ -82,6 +82,10 @@ h3 {
   font-size: 75%;
 }
 
+.small {
+  font-size: 75%;
+}
+
 .mobile-hidden {
   display: none;
 
@@ -160,12 +164,21 @@ h3 {
   }
 }
 
-.social-networks__link {
-  color: colors.$secondary;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: typography.$small;
-  @include mixins.tablet {
-    font-size: typography.$normal;
+.social-networks {
+  &__link {
+    color: colors.$secondary;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: typography.$small;
+
+    @include mixins.tablet {
+      font-size: typography.$normal;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: -0.25rem;
   }
 }

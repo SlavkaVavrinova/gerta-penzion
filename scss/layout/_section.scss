@@ -41,6 +41,7 @@
       padding-left: 1rem;
 
       @include mixins.special(900px) {
+        margin-left: 0;
         font-size: typography.$large;
       }
 
@@ -49,6 +50,7 @@
         font-size: typography.$xLarge;
       }
     }
+
     &--contact-email {
       @include mixins.special(900px) {
         margin-left: 0;
@@ -96,12 +98,14 @@
       z-index: -10;
     }
   }
+
   &__left {
     @include mixins.special(900px) {
       align-self: center;
       margin-right: typography.$spacer;
     }
   }
+
   &__one-row {
     @include mixins.special(900px) {
       grid-column: 2/-1;
@@ -164,6 +168,7 @@
       color: colors.$light;
       padding: 0.5rem 0;
     }
+
     &--gerta {
       margin-left: 40%;
     }

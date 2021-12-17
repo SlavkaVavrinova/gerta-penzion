@@ -3,59 +3,6 @@
 @use '../base/mixins';
 
 .room {
-  margin-top: typography.$spacer;
-
-  @include mixins.special(900px) {
-    display: grid;
-    grid-template-columns: 1fr 7fr 6fr;
-    margin: typography.$spacerXL 0;
-  }
-
-  @include mixins.large {
-    margin: typography.$spacerXXL 0;
-  }
-
-  &__h2 {
-    margin-left: 10vw;
-    position: relative;
-    padding-left: 1em;
-
-    @include mixins.special(900px) {
-      writing-mode: vertical-lr;
-      margin-left: 0;
-      margin-top: 0;
-      padding-top: 2em;
-      text-align: end;
-      transform: rotate(180deg);
-      padding-left: 0;
-      background: colors.$light;
-    }
-
-    @include mixins.large {
-      gap: typography.$spacer;
-    }
-  }
-
-  &__h2::before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: -10vw;
-    width: 10vw;
-    height: 1em;
-    border-bottom: 1px solid colors.$secondary;
-
-    @include mixins.special(900px) {
-      left: 0;
-      width: 100%;
-      height: 30%;
-      border-bottom: 0;
-      border-left: 1px solid colors.$secondary;
-      margin-left: 0.7em;
-      z-index: -10;
-    }
-  }
-
   &__img {
     width: calc(100% - 16px);
     margin-left: 16px;
@@ -72,59 +19,6 @@
 }
 
 .section-room {
-  margin-top: typography.$spacerL;
-
-  @include mixins.special(900px) {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
-    margin: typography.$spacerXL 0;
-    align-items: center;
-  }
-
-  @include mixins.large {
-    margin: typography.$spacerXXL 0;
-  }
-
-  &__h2 {
-    margin-left: 10vw;
-    position: relative;
-    padding-left: 1em;
-    @include mixins.special(900px) {
-      writing-mode: vertical-lr;
-      margin-left: 0;
-      margin-top: 0;
-      padding-top: 2em;
-      text-align: end;
-      transform: rotate(180deg);
-      padding-left: 0;
-      background: colors.$light;
-    }
-
-    @include mixins.large {
-      gap: typography.$spacer;
-    }
-  }
-
-  &__h2::before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: -10vw;
-    width: 10vw;
-    height: 1em;
-    border-bottom: 1px solid colors.$secondary;
-
-    @include mixins.special(900px) {
-      left: 0;
-      width: 100%;
-      height: 30%;
-      border-bottom: 0;
-      border-left: 1px solid colors.$secondary;
-      margin-left: 0.7em;
-      z-index: -10;
-    }
-  }
-
   &__img {
     max-width: 100%;
   }
