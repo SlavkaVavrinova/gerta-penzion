@@ -1029,6 +1029,47 @@
   color: #bb0a21;
 }
 
+.booking__list {
+  list-style-type: none;
+}
+.booking__link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  color: #66462c;
+  text-decoration: none;
+  font-size: 16px;
+}
+.booking__link:hover, .booking__link:focus {
+  color: #b09c59;
+}
+@media screen and (min-width: 900px) {
+  .booking__link {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .booking__link {
+    font-size: 48px;
+  }
+}
+.booking__icon {
+  background-color: #b09c59;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  padding: 0.5em;
+  margin-right: 1em;
+}
+.booking__icon--email {
+  display: none;
+}
+@media screen and (min-width: 330px) {
+  .booking__icon--email {
+    display: inline-block;
+  }
+}
+
 .form {
   width: 100%;
   max-width: 400px;
@@ -1185,22 +1226,17 @@
 .contact__list {
   list-style-type: none;
 }
-.contact__link {
+.contact-site__link {
   display: flex;
   align-items: center;
   margin-bottom: 1em;
-  color: #0b0500;
+  color: #66462c;
+  font-weight: 600;
   text-decoration: none;
+  font-size: 16px;
 }
-@media screen and (min-width: 900px) {
-  .contact__link {
-    font-size: 32px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contact__link {
-    font-size: 48px;
-  }
+.contact-site__link:hover, .contact-site__link:focus {
+  color: #b09c59;
 }
 .contact__icon {
   background-color: #b09c59;
@@ -1235,12 +1271,6 @@
   color: #66462c;
   font-weight: 600;
   text-decoration: none;
-}
-.contact__link {
-  color: #fffdf7;
-}
-.contact__link:hover, .contact__link:focus, .contact__link:active {
-  background-color: #b09c59;
 }
 
 .map-box--mobile {

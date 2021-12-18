@@ -6,6 +6,48 @@
   color: colors.$error;
 }
 
+.booking {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    color: colors.$secondary;
+    text-decoration: none;
+    font-size: typography.$normal;
+
+    &:hover,
+    &:focus {
+      color: colors.$primary;
+    }
+    @include mixins.special(900px) {
+      font-size: typography.$xLarge;
+    }
+    @include mixins.large {
+      font-size: typography.$xxLarge;
+    }
+  }
+  &__icon {
+    background-color: colors.$primary;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    padding: 0.5em;
+    margin-right: 1em;
+
+    &--email {
+      display: none;
+
+      @media screen and (min-width: 330px) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
 .form {
   width: 100%;
   max-width: 400px;

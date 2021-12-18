@@ -7,17 +7,18 @@
     list-style-type: none;
   }
 
-  &__link {
+  &-site__link {
     display: flex;
     align-items: center;
     margin-bottom: 1em;
-    color: colors.$dark;
+    color: colors.$secondary;
+    font-weight: 600;
     text-decoration: none;
-    @include mixins.special(900px) {
-      font-size: typography.$xLarge;
-    }
-    @include mixins.large {
-      font-size: typography.$xxLarge;
+    font-size: typography.$normal;
+
+    &:hover,
+    &:focus {
+      color: colors.$primary;
     }
   }
 
@@ -56,15 +57,6 @@
     color: colors.$secondary;
     font-weight: 600;
     text-decoration: none;
-  }
-
-  &__link {
-    color: colors.$light;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: colors.$primary;
-    }
   }
 }
 
