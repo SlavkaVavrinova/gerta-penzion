@@ -1219,8 +1219,7 @@
 
 .form-message {
   font-size: 24px;
-  color: #bb0a21;
-  z-index: 100000;
+  color: #037ea7;
 }
 
 .contact__list {
@@ -1233,7 +1232,6 @@
   color: #66462c;
   font-weight: 600;
   text-decoration: none;
-  font-size: 16px;
 }
 .contact-site__link:hover, .contact-site__link:focus {
   color: #b09c59;

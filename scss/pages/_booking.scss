@@ -212,6 +212,5 @@
 
 .form-message {
   font-size: typography.$large;
-  color: colors.$error;
-  z-index: 100000;
+  color: colors.$formMessage;
 }

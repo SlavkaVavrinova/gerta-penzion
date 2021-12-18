@@ -19,7 +19,7 @@ class EmailReservation
                   <title>Rezervace</title>
                 </head>
                 <body>
-                  <p>Nová rezervace!</p>
+                  <p style="">Nová rezervace!</p>
                   <table>';
     foreach ($_POST as $key => $value) {
       $message .= '<tr><th>' . htmlentities($key) . '</th><td>' . htmlentities($value) . '</td></tr>';
@@ -31,8 +31,8 @@ class EmailReservation
     $headers = [
       'X-Mailer' => 'PHP/' . phpversion(),
       'MIME-Version' => '1.0',
-      'Content-type' => 'text/html; charset=iso-8859-1',
-      'From' => 'Rezervace <pension.gerta@seznam.cz>',
+      'Content-type' => 'text/html; charset=UTF-8',
+      'From' => 'Rezervace <info@gerta.cz>',
       'Reply-To' => $_POST['email'],
     ];
 

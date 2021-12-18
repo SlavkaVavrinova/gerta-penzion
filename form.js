@@ -59,7 +59,7 @@ const formElm = document.querySelector('#reservationForm');
 if (formElm) {
   formElm.addEventListener('submit', (e) => {
     e.preventDefault();
-    fetch('rezervace.php', {
+    fetch('/rezervace.php', {
       method: 'POST',
       body: new FormData(formElm),
     })

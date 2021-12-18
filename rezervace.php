@@ -16,8 +16,7 @@ $emailReservation->sendFormToEmail();
 if ($emailReservation->sendFormToEmail()) {
   $response = [
     "status" => "ok",
-    "message" => "Děkujeme za odeslání formuláře.",
-    'Vaše poptávka ubytování na jméno ' . $_POST['name'] . ' byla vytvořena. Budeme Vás brzy kontaktovat. Krásný zbytek dne, Penzion Gerta'
+    "message" => 'Vaše poptávka ubytování na jméno ' . $_POST['name'] . ' byla vytvořena. Budeme Vás brzy kontaktovat. Krásný zbytek dne, Penzion Gerta'
   ];
 } else {
   $response = [
