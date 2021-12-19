@@ -1368,6 +1368,10 @@
   }
 }
 
+.align-start {
+  align-self: flex-start;
+}
+
 .gallery__img {
   max-width: 100%;
   max-height: 550px;
@@ -1566,6 +1570,10 @@ h3 {
 .sup {
   padding-bottom: 0.7em;
   font-size: 75%;
+}
+
+a {
+  color: #037ea7;
 }
 
 .small {
