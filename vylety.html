@@ -1,12 +1,61 @@
 ---
 layout: home.njk
-title: Výlety z Penzionu Gerta v Českém Krumlově
+title: Výlety z Pensionu Gerta v Českém Krumlově
 ---
 
 <header class="header">
   <div class="header__hero">
     <h1 class="header__title">Výlety</h1>
-    <p class="important-banner-text">Těšte se, na stránce s výlety pracujeme</p>
+    <p class="important-banner-text">Co budete dnes dělat?</p>
   </div>
 </header>
-<main class="main"></main>
+<main class="main">
+  <p>Inspirace, kam se vydat mimo Krumlov na výlet při delší dovolené.</p>
+  <p>
+    Krumlov zmíním spíše výjimečně u něčeho zajímavého. V Českém Krumlově
+    zakopnete o památku, galerii, zajímavá místa atd. při každém kroku a každý
+    host má program většinou připraven.
+  </p>
+
+
+  {%- for vylety in collections.vylety -%}
+
+
+ <section class="section">
+    <h2 class="section__h2 section__h2--small">{{ vylety.data.title }}</h2>
+    <div class="section__left">
+      <picture class="room__picture">
+        <source
+          srcset="/images/trips/profile/{{ vylety.data.img }}.webp" />
+        <img
+          class="room__img"
+          src="/images/trips/profile/{{ vylety.data.img }}.jpeg"
+          alt="Dvojlůžkový pokoj s kuchyňkou"
+      /></picture>
+    </div>
+    <div class="section__right">
+      <p class="room__motto">{{ vylety.data.subtitle }}</p>
+      <p>{{ vylety.data.perex }}</p>
+      <div class="button--right">
+        <a class="button__link" href="{{ vylety.url }}">
+          <button class="button">  Inspirovat se</button></a
+        >
+      </div>
+    </div>
+  </section>
+
+  {%- endfor -%}
+
+ 
+
+
+
+
+ 
+
+
+
+</main>
+
+
+
