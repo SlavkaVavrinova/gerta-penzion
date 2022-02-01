@@ -16,12 +16,12 @@ $emailReservation->sendFormToEmail();
 if ($emailReservation->sendFormToEmail()) {
   $response = [
     "status" => "ok",
-    "message" => 'Vaše poptávka ubytování na jméno ' . $_POST['jmeno'] . ' byla vytvořena. Budeme Vás brzy kontaktovat. Krásný zbytek dne, Pension Gerta'
+    "message" => 'Your accommodation request for the name ' . $_POST['name'] . ' has been created. We will contact you soon. A beautiful rest of the day, Pension Gerta'
   ];
 } else {
   $response = [
     "status" => "error",
-    "message" => "Omlouváme se, bohužel při odesílání formuláře došlo k chybě. Prosím vyplňte jej znovu. Děkujeme.",
+    "message" => "Unfortunately, an error occurred while submitting the form. Please fill in again. Thank you.",
   ];
 }
 

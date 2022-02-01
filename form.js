@@ -73,3 +73,23 @@ if (formElm) {
       });
   });
 }
+
+const formElmEn = document.querySelector('#reservationFormEn');
+
+if (formElmEn) {
+  formElmEn.addEventListener('submit', (e) => {
+    e.preventDefault();
+    fetch('/rezervaceEn.php', {
+      method: 'POST',
+      body: new FormData(formElmEn),
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        formElmEn.style.display = 'none';
+        const formMessage = document.createElement('div');
+        formMessage.classList.add('form-message');
+        formMessage.textContent = json.message;
+        formElmEn.parentElement.appendChild(formMessage);
+      });
+  });
+}

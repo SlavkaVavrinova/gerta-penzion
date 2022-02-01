@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('*.js');
   eleventyConfig.addPassthroughCopy('rezervace.php');
+  eleventyConfig.addPassthroughCopy('rezervaceEn.php');
   eleventyConfig.addPassthroughCopy('Class');
 
   return {

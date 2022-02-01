@@ -1,0 +1,60 @@
+---
+layout: homeEN.njk
+title: Trips from Pension Gerta in Český Krumlov
+---
+
+<header class="header">
+  <div class="header__hero">
+    <h1 class="header__title">Trips</h1>
+    <p class="important-banner-text">What will you do today?</p>
+  </div>
+</header>
+<main class="main">
+  <p>Inspiration where to go outside Krumlov for a trip during a longer holiday.</p>
+  <p>
+ I write trips only in czech language. Please use translator.
+   I would like to apologize and thank you.
+  </p>
+
+
+  {%- for vylety in collections.vylety -%}
+
+
+ <section class="section">
+    <h2 class="section__h2 section__h2--small">{{ vylety.data.title }}</h2>
+    <div class="section__left">
+      <picture class="room__picture">
+        <source
+          srcset="/images/trips/profile/{{ vylety.data.img }}.webp" />
+        <img
+          class="room__img"
+          src="/images/trips/profile/{{ vylety.data.img }}.jpeg"
+          alt="Dvojlůžkový pokoj s kuchyňkou"
+      /></picture>
+    </div>
+    <div class="section__right">
+      <p class="room__motto">{{ vylety.data.subtitle }}</p>
+      <p>{{ vylety.data.perex }}</p>
+      <div class="button--right">
+        <a class="button__link" href="{{ vylety.url }}">
+          <button class="button"> Get inspired</button></a
+        >
+      </div>
+    </div>
+  </section>
+
+  {%- endfor -%}
+
+ 
+
+
+
+
+ 
+
+
+
+</main>
+
+
+
