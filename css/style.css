@@ -74,7 +74,7 @@
   box-shadow: 0px 2px 4px #b09c59;
 }
 .menu__logo:hover, .menu__logo:focus {
-  background-color: #b09c59;
+  background-color: #715d18;
 }
 @media screen and (min-width: 1200px) {
   .menu__logo {
@@ -448,6 +448,15 @@
   background-color: #b09c59;
 }
 
+.roomActive {
+  border-radius: 10px 0 0 0;
+}
+@media screen and (min-width: 700px) {
+  .roomActive {
+    border-radius: 0;
+  }
+}
+
 .menu .menu-opened {
   display: flex;
   position: absolute;
@@ -523,6 +532,31 @@
   z-index: 10000;
   border-left: 8px solid #f9ecc1;
   border-bottom: 8px solid #f9ecc1;
+}
+
+@media screen and (min-width: 700px) {
+  .ierenHidden {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) and (min-width: 950px) {
+  .ierenHidden {
+    display: inline-block;
+  }
+}
+
+.ieren {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .ieren {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 950px) {
+  .ieren {
+    display: none;
+  }
 }
 
 .footer {
@@ -1494,6 +1528,11 @@
     grid-column: span 2;
   }
 }
+.text404 {
+  grid-column: 1/-1;
+  border-right: none;
+}
+
 .trip__title {
   font-size: 32px;
   margin-top: 3em;

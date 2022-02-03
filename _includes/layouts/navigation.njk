@@ -35,12 +35,12 @@
     </ul>
     <ul class="menu__down">
       <li class="menu__item menu__item--rooms" id="rooms">
-        <a class="menu__link menu__link--rooms  {{ 'menu__link--active' if page.fileSlug === 'pokoje' }} " href="/pokoje">
+        <a class="menu__link menu__link--rooms  {{ 'menu__link--active roomActive' if page.fileSlug === 'pokoje' }} " href="/pokoje">
           pokoje</a>
       </li>
       <li class="menu__item menu__item--logo ">
-        <a class="menu__link menu__link--logo {{ 'menu__link--active' if page.fileSlug === '' }}" href="/">
-          <img id="logo" class="menu__logo" src="/images/logo.svg" alt="Logo pension Gerta Český Krumlov"/>
+        <a class="menu__link menu__link--logo" href="/">
+          <img id="logo" class="menu__logo  {{'menu__link--active' if page.fileSlug === ''}}" src="/images/logo.svg" alt="Logo pension Gerta Český Krumlov"/>
         </a>
       </li>
       <li class="menu__item menu__item--contact " id="contact">
@@ -53,8 +53,8 @@
     </ul>
     <ul class="menu__hide" id="menu__open">
       <img class="menu__cross" id="cross" src="/images/cross.svg" alt="Ikona křížek"/>
-      <li class="menu__item menu__item--home">
-        <a class="menu__link menu__link--home {{'menu__link--active' if page.fileSlug === 'index'}}" href="/">domů</a>
+      <li class="menu__item menu__item--home ">
+        <a class="menu__link menu__link--home {{'menu__link--active' if page.fileSlug === ''}}" href="/">domů</a>
       </li>
       <li class="menu__item menu__item--gallery">
         <a class="menu__link menu__link--gallery {{ 'menu__link--active' if page.fileSlug === 'galerie' }} " href="/galerie">

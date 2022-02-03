@@ -1,25 +1,50 @@
 ---
-layout: homeEN.njk
-title: Booking * Pension Gerta Český Krumlov
+layout: homeDe.njk
+title: Reservierung * Pension Gerta Český Krumlov
 ---
 
 <header class="header">
   <div class="header__hero">
-    <h1 class="header__title">Booking</h1>
+    <h1 class="header__title">Reservierung</h1>
     <p class="important-banner-text">
-      Official site Pension Gerta<br />
+     Offizielle Seite Pension Gerta<br />
       =<br />
- the lowest price
+ der niedrigste Preis
     </p>
   </div>
 </header>
 <main class="main">
   <p>
-    Send us an email or fill out the form. Thank you. We will answer as soon as possible. 
+      Wenn Sie Schnelligkeit bevorzugen, rufen Sie an. Mutti spricht deutsch. Oder füllen Sie unser Formular aus und wir werden uns bei Ihnen melden bald.
   </p>
- 
+   <section class="section">
+    <h2 class="section__h2 section__h2--small">Per Telefon</h2>
+    <div class="section__one-row">
+      <ul class="booking__list">
+        <li class="booking__item">
+          <a class="booking__link" href="tel:+420380711979">
+            <img
+              class="booking__icon"
+              src="/images/contact/phone.svg"
+              alt="Ikona telefon"
+            />+420 380 711 979</a
+          >
+        </li>
+        <li class="booking__item">
+          <a class="booking__link" href="tel:+420777078309">
+            <img
+              class="booking__icon"
+              src="/images/contact/mobile.svg"
+              alt="Ikona mobilní telefon"
+            />+420 777 078 309</a
+          >
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <section class="section">
-    <h2 class="section__h2 section__h2--small">By email</h2>
+    <h2 class="section__h2 section__h2--small">Per E-Mail</h2>
     <div class="section__one-row">
       <ul class="booking__list">
         <li class="booking__item">
@@ -36,12 +61,12 @@ title: Booking * Pension Gerta Český Krumlov
   </section>
 
   <section class="section">
-    <h2 class="section__h2 section__h2--small">On-line</h2>
+    <h2 class="section__h2 section__h2--small">Per Online-Buchung</h2>
     <div class="section__center">
-      <form id="reservationFormEN" class="form">
+      <form id="reservationFormDE" class="form">
         <div class="form__field">
           <label class="form__label" for="name">
-            Name and surname <span class="required">*</span></label
+            Name und Nachname <span class="required">*</span></label
           >
           <input
             class="form__input"
@@ -67,7 +92,7 @@ title: Booking * Pension Gerta Český Krumlov
         </div>
 
         <div class="form__field">
-          <label class="form__label" for="tel"> Phone </label>
+          <label class="form__label" for="tel"> Telefon </label>
           <input
             class="form__input"
             type="tel"
@@ -78,9 +103,9 @@ title: Booking * Pension Gerta Český Krumlov
         </div>
 
         <fieldset class="fieldset">
-          <legend class="form__legend">Booking date</legend>
+          <legend class="form__legend">Buchungsdatum</legend>
 
-          <label class="date__label" for="date__from"> From </label>
+          <label class="date__label" for="date__from"> Von </label>
           <input
             class="date__input"
             type="date"
@@ -88,7 +113,7 @@ title: Booking * Pension Gerta Český Krumlov
             id="date__from"
           />
 
-          <label class="date__label" for="date__to"> To </label>
+          <label class="date__label" for="date__to"> Bis </label>
           <input
             class="date__input"
             type="date"
@@ -103,13 +128,13 @@ title: Booking * Pension Gerta Český Krumlov
             id="date__checkbox"
           />
           <label class="date__checkbox--label" for="date__checkbox">
-I don't know the exact date          </label>
+Das genaue Datum kenne ich nicht</label>
 
           <div class="date__checkbox--hidden" id="date__specification">
             <label
               class="form__label form__label--checkbox date__text--hidden"
               for="date__text"
-              >Enter a date specification
+              >Geben Sie eine Datumsangabe ein
             </label>
             <input
               class="form__input date__input--hidden"
@@ -121,21 +146,21 @@ I don't know the exact date          </label>
         </fieldset>
 
         <div class="form__field">
-          <label class="form__label" for="room">Required room</label>
+          <label class="form__label" for="room">Erforderlicher Zimmer</label>
           <select class="form__select" name="room" id="room">
-            <option value="vyber">I don't prefer a room</option>
-            <option value="dvojluzkovy">Double</option>
-            <option value="terasa">Double with kitchen</option>
-            <option value="triluzkovy">Triple</option>
-            <option value="rodinny">Family</option>
-            <option value="mensi">Smaller</option>
+            <option value="vyber">Ich bevorzuge keine</option>
+            <option value="dvojluzkovy">Doppelzimmer</option>
+            <option value="terasa">Doppelzimmer mit der Küche</option>
+            <option value="triluzkovy">Dreibettzimmer</option>
+            <option value="rodinny">Familienzimmer</option>
+            <option value="mensi">Kleineres</option>
           </select>
         </div>
 
         <div class="form__field">
           <div class="room__info--display" id="room__info">
             <label class="form__label" for="person">
-Enter the number of people / specification
+Geben Sie die Anzahl der Personen / Details ein
             </label>
             <input class="form__input" type="text" name="person" id="person" />
           </div>
@@ -143,7 +168,7 @@ Enter the number of people / specification
 
         <div class="form__field">
           <label class="form__label" for="message"
-            >Do you want to say something else?
+            >Wollen Sie noch etwas sagen?
           </label>
           <textarea
             class="form__textarea"
@@ -155,15 +180,15 @@ Enter the number of people / specification
           ></textarea>
         </div>
         <p class="text-right small">
-          <span class="required">*</span>Required information
+          <span class="required">*</span>Benötigte Information
         </p>
 
         <div class="error-message" id="error-message"></div>
 
         <div class="form__button">
           <button class="button" type="submit" name="send" id="send">
-            Send request
-          </button>
+          Senden <span class="mobile-hidden"> unverbindliche </span> Anfrage
+                      </button>
         </div>
       </form>
     </div>

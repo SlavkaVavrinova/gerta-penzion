@@ -75,9 +75,10 @@
     background-color: colors.$secondary;
     border-radius: 0 0 10px 10px;
     box-shadow: 0px 2px 4px colors.$primary;
+
     &:hover,
     &:focus {
-      background-color: colors.$primary;
+      background-color: colors.$primaryDark;
     }
 
     @include mixins.large {
@@ -464,6 +465,14 @@
   }
 }
 
+.roomActive {
+  border-radius: 10px 0 0 0;
+
+  @include mixins.tablet {
+    border-radius: 0;
+  }
+}
+
 .menu .menu-opened {
   display: flex;
   position: absolute;
@@ -541,4 +550,23 @@
   z-index: 10000;
   border-left: 8px solid colors.$primaryVariant;
   border-bottom: 8px solid colors.$primaryVariant;
+}
+
+.ierenHidden {
+  @include mixins.tablet {
+    display: none;
+    @include mixins.special(950px) {
+      display: inline-block;
+    }
+  }
+}
+
+.ieren {
+  display: none;
+  @include mixins.tablet {
+    display: inline-block;
+  }
+  @include mixins.special(950px) {
+    display: none;
+  }
 }
